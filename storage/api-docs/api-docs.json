@@ -1304,6 +1304,19 @@
                 }
             }
         },
+        "/api/data-aggregation-plan-contract/get-group": {
+            "get": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "e3c570fccaf8ed42b362416f68c4ec43",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
         "/api/data-aggregation-plan-contract/{id}": {
             "delete": {
                 "tags": [

@@ -80,6 +80,32 @@ class PlanContractController extends Controller
     }
 
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @OA\Get (
+     *     path="/api/data-aggregation-plan-contract/get-group",
+     *     tags={"Plan contract"},
+     *     @OA\Response(
+     *          response=200,
+     *          description="",
+     *      ),
+     * )
+     */
+    public function getGroup()
+    {
+
+        $res = PlanContract::selectRaw('company_name, date_contract_end, SUM(sum)')
+            ->groupBy('company_name')
+            ->groupBy('date_contract_end')
+            ->get();
+
+        return response($res);
+
+
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
