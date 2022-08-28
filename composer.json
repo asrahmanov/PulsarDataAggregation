@@ -5,14 +5,16 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "7.2",
+        "php": "^7.3|^8.0",
         "ext-json": "*",
         "darkaonline/swagger-lume": "8.*",
+        "flipbox/lumen-generator": "^9.1",
         "laravel/lumen-framework": "^8.3.1",
         "laravel/scout": "^9.4",
-        "phpoffice/phpspreadsheet": "^1.24",
         "rap2hpoutre/laravel-log-viewer": "^2.1",
-        "yab/laravel-scout-mysql-driver": "^5.1"
+        "yab/laravel-scout-mysql-driver": "^5.1",
+        "phpoffice/phpspreadsheet": "^1.22",
+        "ext-zip": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
@@ -39,7 +41,10 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4.21"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
