@@ -13,7 +13,7 @@
         "laravel/scout": "^9.4",
         "rap2hpoutre/laravel-log-viewer": "^2.1",
         "yab/laravel-scout-mysql-driver": "^5.1",
-        "phpoffice/phpspreadsheet": "^1.22",
+        "phpoffice/phpspreadsheet": "^1.24.1",
         "ext-zip": "*"
     },
     "require-dev": {
