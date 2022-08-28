@@ -81,6 +81,31 @@ class ExpectedRevenueController extends Controller
     }
 
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @OA\Get (
+     *     path="/api/data-aggregation-expected-revenue/get-group",
+     *     tags={"Expected Revenue"},
+     *     @OA\Response(
+     *          response=200,
+     *          description="",
+     *      ),
+     * )
+     */
+    public function getGroup()
+    {
+
+        $res = ExpectedRevenue::selectRaw('company_name, mount, SUM(sum)')
+            ->groupBy('company_name')
+            ->groupBy('mount')
+            ->get();
+
+        return response($res);
+
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -142,11 +167,11 @@ class ExpectedRevenueController extends Controller
     public function store(Request $request)
     {
 
-       if($request->id > 0) {
-           $form = ExpectedRevenue::whereId($request->id)->first();
-       } else {
-           $form = new ExpectedRevenue();
-       }
+        if ($request->id > 0) {
+            $form = ExpectedRevenue::whereId($request->id)->first();
+        } else {
+            $form = new ExpectedRevenue();
+        }
 
         $validator = $form->validate($request->all());
         if ($validator->fails()) {

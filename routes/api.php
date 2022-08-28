@@ -64,6 +64,7 @@ reg_routes('data-aggregation-expected-revenue', \App\Http\Controllers\Api\Expect
     [
         ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
         ['method' => 'get', 'uri' => 'get-by-name', 'pathParams'=>['company_name']],
+        ['method' => 'get', 'uri' => 'get-group'],
     ]
 );
 
