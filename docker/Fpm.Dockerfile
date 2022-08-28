@@ -7,12 +7,18 @@ ARG uid
 RUN apt-get update && apt-get install -y \
     git \
     curl \
+    nodejs \
+    npm \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
     unzip \
     libzip-dev \
     zip \
+    libxml2-dev \
+    libzip-dev \
+    libpng-dev \
+    jpegoptim optipng pngquant gifsicle \
     php-zip \
     && docker-php-ext-install zip
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
