@@ -7,6 +7,6 @@ Homestead.yaml
 
 # Project exclude paths
 # /storage/api-docs/
-/storage/app/
-/storage/framework/
-/_ide_helper_models.php
+#/storage/app/
+#/storage/framework/
+#/_ide_helper_models.php
