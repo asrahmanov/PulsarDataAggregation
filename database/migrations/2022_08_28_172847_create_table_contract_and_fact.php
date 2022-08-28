@@ -41,6 +41,7 @@ class CreateTableContractAndFact extends Migration
             $table->DOUBLE('fact_12')->unsigned()->default(0);
             $table->DOUBLE('plan_12')->unsigned()->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
