@@ -1,0 +1,1493 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "pulsar_data_aggregation_API",
+        "description": "",
+        "contact": {
+            "email": ""
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/data-aggregation-contract-and-fact": {
+            "get": {
+                "tags": [
+                    "Contract and fact"
+                ],
+                "operationId": "bd3c173baaa07b6b6f89b93203c63800",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Contract and fact"
+                ],
+                "operationId": "922436ee214f588418087fc007ea7eb8",
+                "requestBody": {
+                    "request": "Create Contract and fact",
+                    "description": "Create Contract and fact Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "fact_1": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_1": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_2": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_2": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_3": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_3": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_4": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_4": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_5": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_5": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_6": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_6": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_7": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_7": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_8": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_8": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_9": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_9": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_10": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_10": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_11": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_11": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_12": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_12": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "fact_1": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_1": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_2": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_2": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_3": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_3": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_4": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_4": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_5": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_5": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_6": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_6": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_7": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_7": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_8": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_8": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_9": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_9": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_10": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_10": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_11": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_11": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-contract-and-fact/get-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "Contract and fact"
+                ],
+                "operationId": "de9200d0291f7e8155adc4de29e8908d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-contract-and-fact/get-by-name/{company_name}": {
+            "get": {
+                "tags": [
+                    "Contract and fact"
+                ],
+                "operationId": "45f6b494ab35b482f45a340f4595cc0d",
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-contract-and-fact/{id}": {
+            "delete": {
+                "tags": [
+                    "Contract and fact"
+                ],
+                "operationId": "37ecaae0d4597005023451dec25c3101",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Contract and fact"
+                ],
+                "operationId": "15eb417da4e10775d1a48fd71f60c496",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "request": "Update Contract and fact",
+                    "description": "Update Contract and fact Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "fact_1": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_1": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_2": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_2": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_3": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_3": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_4": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_4": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_5": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_5": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_6": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_6": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_7": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_7": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_8": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_8": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_9": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_9": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_10": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_10": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_11": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_11": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "fact_12": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_12": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "fact_1": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_1": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_2": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_2": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_3": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_3": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_4": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_4": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_5": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_5": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_6": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_6": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_7": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_7": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_8": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_8": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_9": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_9": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_10": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_10": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_11": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_11": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "fact_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                },
+                                                "field2": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field2 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-expected-revenue": {
+            "get": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "8e279d3cf3da500ba81f4c7b1e0d8739",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "32e6f6578ca0ba3aa3d97837c4c9fdba",
+                "requestBody": {
+                    "request": "Create Expected Revenue",
+                    "description": "Create Expected Revenue Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "mount": {
+                                        "description": "0",
+                                        "type": "text",
+                                        "example": "Август"
+                                    },
+                                    "sum": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "mount": {
+                                            "description": "Август",
+                                            "type": "text",
+                                            "example": "Август"
+                                        },
+                                        "sum": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-expected-revenue/get-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "d9c08262f38ce5445f4f8d855682d6b7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-expected-revenue/get-by-name/{company_name}": {
+            "get": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "7b7ed99bb69ec77a16b9d2b2f1681f5c",
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-expected-revenue/get-group": {
+            "get": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "732931223958ffbcda12ee0393778ff9",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-expected-revenue/{id}": {
+            "delete": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "74d906f2f2732bf5d51758f8ac934f08",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Expected Revenue"
+                ],
+                "operationId": "0260651aa18d6497266d9e97dc2c9a0a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "request": "Update Expected Revenue",
+                    "description": "Update Expected Revenue Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": "Тест"
+                                    },
+                                    "mount": {
+                                        "description": "Август",
+                                        "type": "text",
+                                        "example": "Август"
+                                    },
+                                    "sum": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "mount": {
+                                            "description": "Август",
+                                            "type": "text",
+                                            "example": "Август"
+                                        },
+                                        "sum": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                },
+                                                "field2": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field2 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-plan-contract": {
+            "get": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "c89900359ef20cffaef4627a760c0193",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "1aeecf204463389259dfaede634579c1",
+                "requestBody": {
+                    "request": "Create Plan contract",
+                    "description": "Create Plan contract Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "date_contract_end": {
+                                        "description": "0",
+                                        "type": "date",
+                                        "example": "2022-01-01"
+                                    },
+                                    "sum": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "date_contract_end": {
+                                            "description": "0",
+                                            "type": "date",
+                                            "example": "0"
+                                        },
+                                        "sum": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-plan-contract/get-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "12024582c14bdce44eedc22f49e47ec9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-plan-contract/get-by-name/{company_name}": {
+            "get": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "354f224cd5199c718fbaea56aff389a9",
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-plan-contract/{id}": {
+            "delete": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "df4089483fe15ea421589273c2c00198",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Plan contract"
+                ],
+                "operationId": "499248874d9f25c1054314c34439c2c7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "request": "Update Plan contract",
+                    "description": "Update Plan contract Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": "Тест"
+                                    },
+                                    "date_contract_end": {
+                                        "description": "2022-01-01",
+                                        "type": "date",
+                                        "example": "2022-01-01"
+                                    },
+                                    "sum": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "date_contract_end": {
+                                            "description": "0",
+                                            "type": "date",
+                                            "example": "0"
+                                        },
+                                        "sum": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                },
+                                                "field2": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field2 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "QCResouce": {
+                "title": "QCResource",
+                "description": "QC resource",
+                "properties": {
+                    "data": {
+                        "title": "Data",
+                        "description": "Data wrapper",
+                        "type": "array",
+                        "items": {
+                            "ref": null
+                        }
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "QCResource"
+                }
+            }
+        }
+    }
+}
