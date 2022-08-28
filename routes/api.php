@@ -46,6 +46,16 @@ reg_routes('data-aggregation-contract-and-fact', \App\Http\Controllers\Api\Contr
     ]
 );
 
+reg_routes('data-aggregation-plan-contract', \App\Http\Controllers\Api\PlanContractController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
+        ['method' => 'get', 'uri' => 'get-by-name', 'pathParams'=>['company_name']],
+    ]
+);
+
 
 function reg_routes($name, $controllerName, $router, $only = [], $except = [], $customUses = [])
 {
