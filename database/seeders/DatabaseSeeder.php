@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
 //            ContractAndFactSeeder::class
-        PlanContractSeeder::class
+//        PlanContractSeeder::class
+        ExpectedRevenueSeeder::class
         ]);
     }
 }
