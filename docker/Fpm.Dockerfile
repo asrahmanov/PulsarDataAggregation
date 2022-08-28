@@ -10,11 +10,8 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
-    unzip \
-    libzip-dev \
     zip \
-    php-zip \
-    && docker-php-ext-install zip
+    unzip
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
 # Clear cache
@@ -30,8 +27,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
-
-ADD docker/php.ini /usr/local/etc/php/conf.d/40-custom.ini
 
 # Set working directory
 WORKDIR /var/www
