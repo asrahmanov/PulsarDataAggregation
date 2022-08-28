@@ -27,7 +27,6 @@ services:
       - ./:/var/www
     networks:
       - pulsar_bridge
-
 networks:
   pulsar_bridge:
     external: true
