@@ -9,6 +9,290 @@
         "version": "1.0.0"
     },
     "paths": {
+        "/api/data-aggregation-budget": {
+            "get": {
+                "tags": [
+                    "Budget"
+                ],
+                "operationId": "ba470578914a0e9d1d00b2f6290f5f47",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Budget"
+                ],
+                "operationId": "a140429aa3af9aa605dd1790dd8ec983",
+                "requestBody": {
+                    "request": "Create Budget",
+                    "description": "Create Budget Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "date_budget": {
+                                        "description": "0",
+                                        "type": "date",
+                                        "example": "2022-01-01"
+                                    },
+                                    "sum": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "date_budget": {
+                                            "description": "0",
+                                            "type": "date",
+                                            "example": "0"
+                                        },
+                                        "sum": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-budget/get-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "Budget"
+                ],
+                "operationId": "557a69301b0bc584f147bac7d1132dab",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-budget/{id}": {
+            "delete": {
+                "tags": [
+                    "Budget"
+                ],
+                "operationId": "679b3daf5cd2232a62c2e73352f00899",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Budget"
+                ],
+                "operationId": "4fdebc2c181590a980bd13c7cac1fd2e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "request": "Update Budget",
+                    "description": "Update Budget Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "date_budget": {
+                                        "description": "2022-01-01",
+                                        "type": "date",
+                                        "example": "2022-01-01"
+                                    },
+                                    "sum": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "date_budget": {
+                                            "description": "0",
+                                            "type": "date",
+                                            "example": "0"
+                                        },
+                                        "sum": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                },
+                                                "field2": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field2 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/data-aggregation-contract-and-fact": {
             "get": {
                 "tags": [

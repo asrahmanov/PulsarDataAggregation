@@ -57,6 +57,15 @@ reg_routes('data-aggregation-operational-plan', \App\Http\Controllers\Api\Operat
     ]
 );
 
+reg_routes('data-aggregation-budget', \App\Http\Controllers\Api\BudgetController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
+    ]
+);
+
 
 reg_routes('data-aggregation-plan-contract', \App\Http\Controllers\Api\PlanContractController::class,
     $router,

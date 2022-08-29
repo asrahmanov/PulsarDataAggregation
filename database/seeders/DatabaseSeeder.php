@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
 //        ContractAndFactSeeder::class,
 //        PlanContractSeeder::class,
 //        ExpectedRevenueSeeder::class,
-            OperationalPlanSeeder::class
+            OperationalPlanSeeder::class,
+            BudgetSeeder::class
         ]);
     }
 }
