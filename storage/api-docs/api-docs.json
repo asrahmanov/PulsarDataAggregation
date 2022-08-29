@@ -1132,6 +1132,561 @@
                 }
             }
         },
+        "/api/data-aggregation-operational-plan": {
+            "get": {
+                "tags": [
+                    "Operational plan"
+                ],
+                "operationId": "bb79a684843225519facb17aa848fd1b",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Operational plan"
+                ],
+                "operationId": "e082064833b634d1c9d4e942eebf02c2",
+                "requestBody": {
+                    "request": "Create Operational plan",
+                    "description": "Create Operational plan Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "short_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "plan_1": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_2": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_3": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_4": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_5": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_6": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_7": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_8": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_9": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_10": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_11": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_12": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "short_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "plan_1": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_2": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_3": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_4": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_5": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_6": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_7": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_8": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_9": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_10": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_11": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-operational-plan/get-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "Operational plan"
+                ],
+                "operationId": "cbfa0101c8527f5fb4016772881ad6b4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-operational-plan/get-by-name/{company_name}": {
+            "get": {
+                "tags": [
+                    "Operational plan"
+                ],
+                "operationId": "ee5aa3360fe570662973ea0bf987cb58",
+                "parameters": [
+                    {
+                        "name": "company_name",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "text"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-operational-plan/{id}": {
+            "delete": {
+                "tags": [
+                    "Operational plan"
+                ],
+                "operationId": "ee45d7e9faf5762506474b3b3e75dbf4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Operational plan"
+                ],
+                "operationId": "faf1c6370c5815b82a7074db6b337b91",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "request": "Update Operational plan",
+                    "description": "Update Operational plan Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": "Тест"
+                                    },
+                                    "short_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
+                                    "plan_1": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_2": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_3": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_4": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_5": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_6": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_7": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_8": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_9": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_10": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_11": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "plan_12": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "short_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "plan_1": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_2": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_3": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_4": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_5": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_6": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_7": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_8": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_9": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_10": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_11": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "plan_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                },
+                                                "field2": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field2 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/data-aggregation-plan-contract": {
             "get": {
                 "tags": [

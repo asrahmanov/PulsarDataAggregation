@@ -30,6 +30,6 @@ class CreateTableExpectedRevenue extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_expected_revenue');
+        Schema::dropIfExists('expected_revenue');
     }
 }

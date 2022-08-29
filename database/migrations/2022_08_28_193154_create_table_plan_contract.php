@@ -30,6 +30,6 @@ class CreateTablePlanContract extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_plan_contract');
+        Schema::dropIfExists('plan_contract');
     }
 }
