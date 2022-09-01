@@ -33,9 +33,6 @@ $router->get('/', function () use ($router) {
 
 
 
-
-
-
 reg_routes('data-aggregation-contract-and-fact', \App\Http\Controllers\Api\ContractAndFactController::class,
     $router,
     [],

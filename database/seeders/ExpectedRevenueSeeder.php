@@ -20,7 +20,7 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $spreadsheet = $reader->load(storage_path('app/25.08.22 форма по ожидаемой выручке.xlsx'));
+        $spreadsheet = $reader->load(storage_path('app/31.08.22 форма по ожидаемой выручке.xlsx'));
 
         //-1 что бы обрезать итого
         $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
