@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Budget extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+
 
     protected $table = 'budget';
     protected $primaryKey = 'id';
