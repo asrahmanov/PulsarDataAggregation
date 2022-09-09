@@ -20,48 +20,49 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $filename = storage_path('app/exp/17/2022/exp.xlsx');
-
-//        if (file_exists($filename)) {
-
-            $spreadsheet = $reader->load($filename);
-
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
+        $filename = storage_path('app/31.08.22 форма по ожидаемой выручке.xlsx');
 
 
-            $insertArray = [];
 
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
+        $spreadsheet = $reader->load();
 
-                if ($company_name == '') {
-                    break;
-                }
+        //-1 что бы обрезать итого
+        $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
 
-                $mount = $item['C'];
-                $sum = $item['D'];
+        $dataArray = $spreadsheet->getActiveSheet()
+            ->rangeToArray(
+                "A2:D$num_rows",     // The worksheet range that we want to retrieve
+                '',        // Value that should be returned for empty cells
+                false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                true         // Should the array be indexed by cell row and cell column
+            );
 
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "year" => 2022,
-                    "company_id" => 17,
-                    "sum" => $sum
-                ];
+
+
+        $insertArray =[];
+
+        foreach ($dataArray as $key => $item){
+            $company_name = $item['B'];
+
+            if($company_name == '' ){
+                break;
             }
 
+            $mount = $item['C'];
+            $sum = $item['D'];
 
-            \DB::table('expected_revenue')->insert($insertArray);
-//        }
+            $insertArray[] = [
+                "company_name"=>$company_name,
+                "mount"=>$mount,
+                "year"=>2022,
+                "company_id"=>17,
+                "sum"=>$sum
+            ];
+        }
+
+
+
+        \DB::table('expected_revenue')->insert($insertArray);
     }
 }
