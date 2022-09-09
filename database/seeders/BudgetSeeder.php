@@ -20,37 +20,139 @@ class BudgetSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $spreadsheet = $reader->load(storage_path('app/25.08.22 Бюджет 2022.xlsx'));
+        $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2022/Бюджет.xlsx');
 
-        //-1 что бы обрезать итого
-        $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-        $dataArray = $spreadsheet->getActiveSheet()
-            ->rangeToArray(
-                "A2:C$num_rows",     // The worksheet range that we want to retrieve
-                '',        // Value that should be returned for empty cells
-                false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                true         // Should the array be indexed by cell row and cell column
-            );
+        if (file_exists($filename)) {
 
 
-        $insertArray = [];
+            $spreadsheet = $reader->load($filename);
 
-        foreach ($dataArray as $key => $item) {
-            $sum = $item['A'];
-            $date = $item['B'];
+            //-1 что бы обрезать итого
+            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
 
-            $date = explode('.', $date);
-            $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+            $dataArray = $spreadsheet->getActiveSheet()
+                ->rangeToArray(
+                    "A2:C$num_rows",     // The worksheet range that we want to retrieve
+                    '',        // Value that should be returned for empty cells
+                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                    true         // Should the array be indexed by cell row and cell column
+                );
 
-            $insertArray[] = [
-                "date_budget" => $date_budget,
-                "sum" => $sum
-            ];
+
+            $insertArray = [];
+
+            foreach ($dataArray as $key => $item) {
+                $sum = $item['A'];
+                $date = $item['B'];
+
+                $date = explode('.', $date);
+                $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+
+                $insertArray[] = [
+                    "date_budget" => $date_budget,
+                    "sum" => $sum,
+                    'company_id' => 17,
+                    'year' => $date[2]
+                ];
+            }
+
+
+            \DB::table('budget')->insert($insertArray);
+        } else {
+            echo "Файл не найден";
+        }
+
+        $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2021/Бюджет.xlsx');
+
+        if (file_exists($filename)) {
+
+
+            $spreadsheet = $reader->load($filename);
+
+            //-1 что бы обрезать итого
+            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+            $dataArray = $spreadsheet->getActiveSheet()
+                ->rangeToArray(
+                    "A2:C$num_rows",     // The worksheet range that we want to retrieve
+                    '',        // Value that should be returned for empty cells
+                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                    true         // Should the array be indexed by cell row and cell column
+                );
+
+
+            $insertArray = [];
+
+            foreach ($dataArray as $key => $item) {
+                $sum = $item['A'];
+                $date = $item['B'];
+
+                $date = explode('.', $date);
+                $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+
+                $insertArray[] = [
+                    "date_budget" => $date_budget,
+                    "sum" => $sum,
+                    'company_id' => 17,
+                    'year' => $date[2]
+                ];
+            }
+
+
+            \DB::table('budget')->insert($insertArray);
+        } else {
+            echo "Файл не найден";
         }
 
 
-        \DB::table('budget')->insert($insertArray);
+
+        $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2023/Бюджет.xlsx');
+
+        if (file_exists($filename)) {
+
+
+            $spreadsheet = $reader->load($filename);
+
+            //-1 что бы обрезать итого
+            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+            $dataArray = $spreadsheet->getActiveSheet()
+                ->rangeToArray(
+                    "A2:C$num_rows",     // The worksheet range that we want to retrieve
+                    '',        // Value that should be returned for empty cells
+                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                    true         // Should the array be indexed by cell row and cell column
+                );
+
+
+            $insertArray = [];
+
+            foreach ($dataArray as $key => $item) {
+                $sum = $item['A'];
+                $date = $item['B'];
+
+                $date = explode('.', $date);
+                $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+
+                $insertArray[] = [
+                    "date_budget" => $date_budget,
+                    "sum" => $sum,
+                    'company_id' => 17,
+                    'year' => $date[2]
+                ];
+            }
+
+
+            \DB::table('budget')->insert($insertArray);
+        } else {
+            echo "Файл не найден";
+        }
+
+
+
+
     }
 }

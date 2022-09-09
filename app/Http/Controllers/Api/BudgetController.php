@@ -83,6 +83,8 @@ class BudgetController extends Controller
      *        required={""},
      *          @OA\Property(property="date_budget",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *    )
      * ),
      *     @OA\Response(
@@ -91,8 +93,10 @@ class BudgetController extends Controller
      *          @OA\JsonContent(
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
-     *          @OA\Property(property="date_budget",description="0", type="date", example="0"),
+     *          @OA\Property(property="date_budget",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *         )
      *      ),
      *     @OA\Response(
@@ -176,8 +180,10 @@ class BudgetController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *          @OA\Property(property="date_budget",description="2022-01-01", type="date", example="2022-01-01"),
+     *          @OA\Property(property="date_budget",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *    )
      * ),
      *     @OA\Response(
@@ -186,8 +192,10 @@ class BudgetController extends Controller
      *          @OA\JsonContent(
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
-     *          @OA\Property(property="date_budget",description="0", type="date", example="0"),
+     *          @OA\Property(property="date_budget",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *
      *         )
      *      ),

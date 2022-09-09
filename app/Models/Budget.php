@@ -18,6 +18,8 @@ class Budget extends Model
 
     protected $fillable=[
         "date_budget",
+        "company_id",
+        "year",
         "sum",
     ];
 

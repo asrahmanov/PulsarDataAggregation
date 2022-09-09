@@ -16,6 +16,8 @@ class CreateTableBudget extends Migration
         Schema::create('budget', function (Blueprint $table) {
             $table->id();
             $table->date('date_budget');
+            $table->integer('year');
+            $table->integer('company_id');
             $table->DOUBLE('sum')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();;
