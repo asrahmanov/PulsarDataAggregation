@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Budget;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
@@ -23,7 +24,9 @@ class BudgetSeeder extends Seeder
         $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2022/Бюджет.xlsx');
 
         if (file_exists($filename)) {
-
+            Budget::where('year','2022')
+                ->where('company_id', '17')
+                ->delete();
 
             $spreadsheet = $reader->load($filename);
 
@@ -67,7 +70,9 @@ class BudgetSeeder extends Seeder
 
         if (file_exists($filename)) {
 
-
+            Budget::where('year','2021')
+                ->where('company_id', '17')
+                ->delete();
             $spreadsheet = $reader->load($filename);
 
             //-1 что бы обрезать итого
@@ -112,6 +117,9 @@ class BudgetSeeder extends Seeder
 
         if (file_exists($filename)) {
 
+            Budget::where('year','2023')
+                ->where('company_id', '17')
+                ->delete();
 
             $spreadsheet = $reader->load($filename);
 
