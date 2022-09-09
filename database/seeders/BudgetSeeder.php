@@ -21,11 +21,9 @@ class BudgetSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2022/Бюджет.xlsx');
+        $filename = storage_path('app/budget/17/2022/Бюджет.xlsx');
 
-        $dir    = storage_path('app/share');
-        $files1 = scandir($dir);
-        var_dump($files1);
+
 
         if (file_exists($filename)) {
             Budget::where('year','2022')
@@ -70,7 +68,7 @@ class BudgetSeeder extends Seeder
             echo "Файл не найден";
         }
 
-        $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2021/Бюджет.xlsx');
+        $filename = storage_path('app/budget/17/2021/Бюджет.xlsx');
 
         if (file_exists($filename)) {
 
@@ -117,7 +115,7 @@ class BudgetSeeder extends Seeder
 
 
 
-        $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2023/Бюджет.xlsx');
+        $filename = storage_path('app/budget/17/2023/Бюджет.xlsx');
 
         if (file_exists($filename)) {
 
