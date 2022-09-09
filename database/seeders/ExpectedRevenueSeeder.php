@@ -20,7 +20,7 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $spreadsheet = $reader->load(storage_path('app/exp/17/2022/exp.xlsx'));
+        $spreadsheet = $reader->load(storage_path('app/31.08.22 форма по ожидаемой выручке.xlsx'));
 
         //-1 что бы обрезать итого
         $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
@@ -51,8 +51,6 @@ class ExpectedRevenueSeeder extends Seeder
             $insertArray[] = [
                 "company_name"=>$company_name,
                 "mount"=>$mount,
-                "company_id"=> '17',
-                "year"=> '2022',
                 "sum"=>$sum
             ];
         }
