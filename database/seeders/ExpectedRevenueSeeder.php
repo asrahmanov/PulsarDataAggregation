@@ -21,7 +21,7 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $filename = storage_path('app/ExpectedRevenue/17/2021/форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/ExpectedRevenue/17/2021/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -69,13 +69,13 @@ class ExpectedRevenueSeeder extends Seeder
 
             \DB::table('expected_revenue')->insert($insertArray);
         } else {
-            echo "Файл не найден /ß";
+            echo "Файл не найден ";
         }
 
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/36/2021/форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/ExpectedRevenue/36/2021/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -123,7 +123,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             \DB::table('expected_revenue')->insert($insertArray);
         } else {
-            echo "Файл не найден /ß";
+            echo "Файл не найден ";
         }
 
 
@@ -184,7 +184,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/36/2022/форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/ExpectedRevenue/36/2022/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -237,7 +237,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/17/2023/форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/ExpectedRevenue/17/2023/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -290,7 +290,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/36/2023/форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/ExpectedRevenue/36/2023/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
