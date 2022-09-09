@@ -51,6 +51,8 @@ class ExpectedRevenueSeeder extends Seeder
             $insertArray[] = [
                 "company_name"=>$company_name,
                 "mount"=>$mount,
+                "year"=>2022,
+                "company_id"=>17,
                 "sum"=>$sum
             ];
         }
