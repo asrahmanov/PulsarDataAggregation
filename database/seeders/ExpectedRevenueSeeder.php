@@ -179,7 +179,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             \DB::table('expected_revenue')->insert($insertArray);
         } else {
-            echo "Файл не найден /";
+            echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
@@ -232,7 +232,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             \DB::table('expected_revenue')->insert($insertArray);
         } else {
-            echo "Файл не найден /";
+            echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
@@ -285,7 +285,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             \DB::table('expected_revenue')->insert($insertArray);
         } else {
-            echo "Файл не найден /";
+            echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
@@ -338,7 +338,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             \DB::table('expected_revenue')->insert($insertArray);
         } else {
-            echo "Файл не найден /";
+            echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
     }
