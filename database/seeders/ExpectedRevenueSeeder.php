@@ -136,9 +136,9 @@ class ExpectedRevenueSeeder extends Seeder
 
         if (file_exists($filename)) {
 
-            ExpectedRevenue::where('company_id', '17')
-                ->where('year','2022')
-                ->forceDelete();
+//            ExpectedRevenue::where('company_id', '17')
+//                ->where('year','2022')
+//                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
