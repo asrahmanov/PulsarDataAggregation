@@ -22,7 +22,7 @@ class ExpectedRevenueSeeder extends Seeder
 
         $filename = storage_path('app/exp/17/2022/exp.xlsx');
 
-        if (file_exists($filename)) {
+//        if (file_exists($filename)) {
 
             $spreadsheet = $reader->load($filename);
 
@@ -62,6 +62,6 @@ class ExpectedRevenueSeeder extends Seeder
 
 
             \DB::table('expected_revenue')->insert($insertArray);
-        }
+//        }
     }
 }
