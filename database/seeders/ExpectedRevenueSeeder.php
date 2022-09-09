@@ -28,7 +28,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             ExpectedRevenue::where('company_id', '17')
                 ->where('year','2021')
-                ->delete();
+                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
@@ -82,7 +82,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             ExpectedRevenue::where('company_id', '36')
                 ->where('year','2021')
-                ->delete();
+                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
@@ -138,7 +138,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             ExpectedRevenue::where('company_id', '17')
                 ->where('year','2022')
-                ->delete();
+                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
@@ -191,7 +191,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             ExpectedRevenue::where('company_id', '36')
                 ->where('year','2022')
-                ->delete();
+                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
@@ -244,7 +244,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             ExpectedRevenue::where('company_id', '17')
                 ->where('year','2023')
-                ->delete();
+                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
@@ -297,7 +297,7 @@ class ExpectedRevenueSeeder extends Seeder
 
             ExpectedRevenue::where('company_id', '36')
                 ->where('year','2023')
-                ->delete();
+                ->forceDelete();
 
             $spreadsheet = $reader->load($filename);
 
