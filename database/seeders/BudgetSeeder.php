@@ -23,7 +23,11 @@ class BudgetSeeder extends Seeder
 
         $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2022/Бюджет.xlsx');
 
+        $dir    = storage_path('/SHARE');
+        $files1 = scandir($dir);
+        var_dump($files1);
 
+        if (file_exists($filename)) {
             Budget::where('year','2022')
                 ->where('company_id', '17')
                 ->delete();
@@ -62,7 +66,9 @@ class BudgetSeeder extends Seeder
 
 
             \DB::table('budget')->insert($insertArray);
-
+        } else {
+            echo "Файл не найден";
+        }
 
         $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2021/Бюджет.xlsx');
 
