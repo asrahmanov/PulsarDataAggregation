@@ -21,7 +21,7 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $filename = storage_path('app/ExpectedRevenue/17/2021/ExpectedRevenue.xlsx');
+        $filename = storage_path('app/Exp/17/2021/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -75,7 +75,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/36/2021/ExpectedRevenue.xlsx');
+        $filename = storage_path('app/Exp/36/2021/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -131,7 +131,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/17/2022/ExpectedRevenue.xlsx');
+        $filename = storage_path('app/Exp/17/2022/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -184,7 +184,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/36/2022/ExpectedRevenue.xlsx');
+        $filename = storage_path('app/Exp/36/2022/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -237,7 +237,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/17/2023/ExpectedRevenue.xlsx');
+        $filename = storage_path('app/Exp/17/2023/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
@@ -290,7 +290,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/36/2023/ExpectedRevenue.xlsx');
+        $filename = storage_path('app/Exp/36/2023/ExpectedRevenue.xlsx');
 
 
         if (file_exists($filename)) {
