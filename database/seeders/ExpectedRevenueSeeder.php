@@ -24,7 +24,7 @@ class ExpectedRevenueSeeder extends Seeder
 
         if (file_exists($filename)) {
 
-            $spreadsheet = $reader->load();
+            $spreadsheet = $reader->load($filename);
 
             //-1 что бы обрезать итого
             $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
