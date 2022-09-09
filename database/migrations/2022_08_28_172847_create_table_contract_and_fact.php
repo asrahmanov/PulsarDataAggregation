@@ -16,6 +16,8 @@ class CreateTableContractAndFact extends Migration
         Schema::create('contract_and_fact', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
+            $table->integer('company_id');
+            $table->integer('year');
             $table->DOUBLE('fact_1')->unsigned()->default(0);
             $table->DOUBLE('plan_1')->unsigned()->default(0);
             $table->DOUBLE('fact_2')->unsigned()->default(0);

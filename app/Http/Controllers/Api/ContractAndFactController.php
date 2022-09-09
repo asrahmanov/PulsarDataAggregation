@@ -62,6 +62,7 @@ class ContractAndFactController extends Controller
      *     path="/api/data-aggregation-contract-and-fact/get-by-name/{company_name}",
      *     @OA\Parameter( name="company_name", in="path", required=false, description="1", @OA\Schema( type="text" ) ),
      *
+     *
      *     @OA\Response(
      *          response=200,
      *          description="",
@@ -78,7 +79,6 @@ class ContractAndFactController extends Controller
             ->where(['company_name' => $company_name])
             ->get();
     }
-
 
 
     /**
@@ -104,7 +104,9 @@ class ContractAndFactController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
+     *     @OA\Parameter( name="company_name", in="path", required=false, description="1", @OA\Schema( type="text" ) ),
+     *     @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *     @OA\Property(property="year",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_1",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_1",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_2",description="0", type="number", example="0"),
@@ -137,7 +139,9 @@ class ContractAndFactController extends Controller
      *          @OA\JsonContent(
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
-     *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
+     *          @OA\Parameter( name="company_name", in="path", required=false, description="1", @OA\Schema( type="text" ) ),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_1",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_1",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_2",description="0", type="number", example="0"),
@@ -185,11 +189,11 @@ class ContractAndFactController extends Controller
     public function store(Request $request)
     {
 
-       if($request->id > 0) {
-           $form = ContractAndFact::whereId($request->id)->first();
-       } else {
-           $form = new ContractAndFact();
-       }
+        if ($request->id > 0) {
+            $form = ContractAndFact::whereId($request->id)->first();
+        } else {
+            $form = new ContractAndFact();
+        }
 
         $validator = $form->validate($request->all());
         if ($validator->fails()) {
@@ -245,7 +249,9 @@ class ContractAndFactController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
+     *          @OA\Parameter( name="company_name", in="path", required=false, description="1", @OA\Schema( type="text" ) ),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_1",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_1",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_2",description="0", type="number", example="0"),
@@ -278,7 +284,9 @@ class ContractAndFactController extends Controller
      *          @OA\JsonContent(
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
-     *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
+     *          @OA\Parameter( name="company_name", in="path", required=false, description="1", @OA\Schema( type="text" ) ),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_1",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_1",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_2",description="0", type="number", example="0"),

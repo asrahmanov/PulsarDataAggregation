@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\OperationalPlan;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
@@ -12,15 +13,22 @@ class OperationalPlanSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+
+
+    public function import($filename, $year, $company_id)
     {
+
+        OperationalPlan::where('company_id',$company_id)
+            ->where('year', $year)
+            ->forceDelete();
+
 
         ini_set('memory_limit', '4096M');
         ini_set('max_execution_time', 0);
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $spreadsheet = $reader->load(storage_path('app/31.08.22 Оперативный план 2022.xlsx'));
+        $spreadsheet = $reader->load($filename);
 
         //-1 что бы обрезать итого
         $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
@@ -35,9 +43,8 @@ class OperationalPlanSeeder extends Seeder
             );
 
 
-        $insertArray = [];
-
         foreach ($dataArray as $key => $item) {
+            $insertArray = [];
             $short_name = $item['A'];
             $company_name = $item['B'];
             $plan_1 = $item['C'];
@@ -59,6 +66,8 @@ class OperationalPlanSeeder extends Seeder
             $insertArray[] = [
                 "short_name" => $short_name,
                 "company_name" => $company_name,
+                "company_id" => $company_id,
+                "year" => $year,
                 "plan_1" => $plan_1,
                 "plan_2" => $plan_2,
                 "plan_3" => $plan_3,
@@ -72,9 +81,66 @@ class OperationalPlanSeeder extends Seeder
                 "plan_11" => $plan_11,
                 "plan_12" => $plan_12
             ];
+            \DB::table('operational_plan')->insert($insertArray);
         }
 
 
-        \DB::table('operational_plan')->insert($insertArray);
+    }
+
+
+    public function run()
+    {
+
+
+        $filename_2021 = storage_path('app/operationalPlan/17/2021/Оперативный план.xlsx');
+        $filename_2022 = storage_path('app/operationalPlan/17/2022/Оперативный план.xlsx');
+        $filename_2023 = storage_path('app/operationalPlan/17/2023/Оперативный план.xlsx');
+
+        if (file_exists($filename_2021)) {
+            $this->import($filename_2021, 2021, 17);
+        } else {
+            echo "Файл {$filename_2021} не найден " . PHP_EOL;
+        }
+
+        if (file_exists($filename_2022)) {
+            $this->import($filename_2022, 2022, 17);
+        } else {
+            echo "Файл {$filename_2022} не найден " . PHP_EOL;
+        }
+
+        if (file_exists($filename_2023)) {
+            $this->import($filename_2023, 2023, 17);
+        } else {
+            echo "Файл {$filename_2023} не найден " . PHP_EOL;
+        }
+
+
+
+        $filename_2021 = storage_path('app/operationalPlan/36/2021/Оперативный план.xlsx');
+        $filename_2022 = storage_path('app/operationalPlan/36/2022/Оперативный план.xlsx');
+        $filename_2023 = storage_path('app/operationalPlan/36/2023/Оперативный план.xlsx');
+
+        if (file_exists($filename_2021)) {
+            $this->import($filename_2021, 2021, 36);
+        } else {
+            echo "Файл {$filename_2021} не найден " . PHP_EOL;
+        }
+
+        if (file_exists($filename_2022)) {
+            $this->import($filename_2022, 2022, 36);
+        } else {
+            echo "Файл {$filename_2022} не найден " . PHP_EOL;
+        }
+
+        if (file_exists($filename_2023)) {
+            $this->import($filename_2023, 2023, 36);
+        } else {
+            echo "Файл {$filename_2023} не найден " . PHP_EOL;
+        }
+
+
+
+
+
     }
 }

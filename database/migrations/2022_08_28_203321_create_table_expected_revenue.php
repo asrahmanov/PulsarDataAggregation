@@ -16,6 +16,7 @@ class CreateTableExpectedRevenue extends Migration
         Schema::create('expected_revenue', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
+            $table->string('short_name');
             $table->string('mount');
             $table->integer('year');
             $table->integer('company_id');

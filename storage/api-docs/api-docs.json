@@ -360,10 +360,15 @@
                                     ""
                                 ],
                                 "properties": {
-                                    "company_name": {
-                                        "description": "Название компании",
-                                        "type": "text",
-                                        "example": ""
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
                                     },
                                     "fact_1": {
                                         "description": "0",
@@ -502,10 +507,15 @@
                                             "type": "number",
                                             "example": "1"
                                         },
-                                        "company_name": {
-                                            "description": "Название компании",
-                                            "type": "text",
-                                            "example": ""
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
                                         },
                                         "fact_1": {
                                             "description": "0",
@@ -799,10 +809,15 @@
                                     ""
                                 ],
                                 "properties": {
-                                    "company_name": {
-                                        "description": "Название компании",
-                                        "type": "text",
-                                        "example": ""
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
                                     },
                                     "fact_1": {
                                         "description": "0",
@@ -941,10 +956,15 @@
                                             "type": "number",
                                             "example": "1"
                                         },
-                                        "company_name": {
-                                            "description": "Название компании",
-                                            "type": "text",
-                                            "example": ""
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
                                         },
                                         "fact_1": {
                                             "description": "0",
@@ -1140,6 +1160,11 @@
                                         "type": "text",
                                         "example": ""
                                     },
+                                    "short_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
                                     "mount": {
                                         "description": "0",
                                         "type": "text",
@@ -1178,6 +1203,11 @@
                                             "example": "1"
                                         },
                                         "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "short_name": {
                                             "description": "Название компании",
                                             "type": "text",
                                             "example": ""
@@ -1392,6 +1422,11 @@
                                         "type": "text",
                                         "example": ""
                                     },
+                                    "short_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
+                                    },
                                     "mount": {
                                         "description": "0",
                                         "type": "text",
@@ -1430,6 +1465,11 @@
                                             "example": "1"
                                         },
                                         "company_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
+                                        },
+                                        "short_name": {
                                             "description": "Название компании",
                                             "type": "text",
                                             "example": ""
@@ -1533,7 +1573,12 @@
                                         "type": "text",
                                         "example": ""
                                     },
-                                    "plan_1": {
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "year": {
                                         "description": "0",
                                         "type": "number",
                                         "example": "0"
@@ -1619,6 +1664,16 @@
                                             "description": "Название компании",
                                             "type": "text",
                                             "example": ""
+                                        },
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
                                         },
                                         "plan_1": {
                                             "description": "0",
@@ -1862,6 +1917,16 @@
                                         "type": "text",
                                         "example": ""
                                     },
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
                                     "plan_1": {
                                         "description": "0",
                                         "type": "number",
@@ -1948,6 +2013,16 @@
                                             "description": "Название компании",
                                             "type": "text",
                                             "example": ""
+                                        },
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
                                         },
                                         "plan_1": {
                                             "description": "0",
@@ -2092,6 +2167,21 @@
                                         "description": "0",
                                         "type": "number",
                                         "example": "0"
+                                    },
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "short_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
                                     }
                                 },
                                 "type": "object"
@@ -2118,12 +2208,27 @@
                                         "date_contract_end": {
                                             "description": "0",
                                             "type": "date",
-                                            "example": "0"
+                                            "example": "2022-01-01"
                                         },
                                         "sum": {
                                             "description": "0",
                                             "type": "number",
                                             "example": "0"
+                                        },
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "short_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
                                         }
                                     },
                                     "type": "object"
@@ -2313,10 +2418,10 @@
                                     "company_name": {
                                         "description": "Название компании",
                                         "type": "text",
-                                        "example": "Тест"
+                                        "example": ""
                                     },
                                     "date_contract_end": {
-                                        "description": "2022-01-01",
+                                        "description": "0",
                                         "type": "date",
                                         "example": "2022-01-01"
                                     },
@@ -2324,6 +2429,21 @@
                                         "description": "0",
                                         "type": "number",
                                         "example": "0"
+                                    },
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
+                                    },
+                                    "short_name": {
+                                        "description": "Название компании",
+                                        "type": "text",
+                                        "example": ""
                                     }
                                 },
                                 "type": "object"
@@ -2350,12 +2470,27 @@
                                         "date_contract_end": {
                                             "description": "0",
                                             "type": "date",
-                                            "example": "0"
+                                            "example": "2022-01-01"
                                         },
                                         "sum": {
                                             "description": "0",
                                             "type": "number",
                                             "example": "0"
+                                        },
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "short_name": {
+                                            "description": "Название компании",
+                                            "type": "text",
+                                            "example": ""
                                         }
                                     },
                                     "type": "object"

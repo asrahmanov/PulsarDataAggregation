@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PlanContract extends Model
 {
@@ -18,6 +19,9 @@ class PlanContract extends Model
     protected $fillable=[
         "company_name",
         "date_contract_end",
+        "short_name",
+        "company_id",
+        "year",
         "sum",
     ];
 

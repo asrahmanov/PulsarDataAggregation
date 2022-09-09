@@ -17,6 +17,8 @@ class CreateTableOperationalPlan extends Migration
             $table->id();
             $table->string('company_name');
             $table->string('short_name');
+            $table->integer('company_id');
+            $table->integer('year');
             $table->DOUBLE('plan_1')->unsigned()->default(0);
             $table->DOUBLE('plan_2')->unsigned()->default(0);
             $table->DOUBLE('plan_3')->unsigned()->default(0);

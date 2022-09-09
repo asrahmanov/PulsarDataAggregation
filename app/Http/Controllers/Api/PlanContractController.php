@@ -133,6 +133,10 @@ class PlanContractController extends Controller
      *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
      *          @OA\Property(property="date_contract_end",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
+     *          @OA\Property(property="short_name",description="Название компании", type="text", example=""),
+
      *    )
      * ),
      *     @OA\Response(
@@ -142,8 +146,11 @@ class PlanContractController extends Controller
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
      *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
-     *          @OA\Property(property="date_contract_end",description="0", type="date", example="0"),
+     *          @OA\Property(property="date_contract_end",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
+     *          @OA\Property(property="short_name",description="Название компании", type="text", example=""),
      *         )
      *      ),
      *     @OA\Response(
@@ -227,9 +234,12 @@ class PlanContractController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *          @OA\Property(property="company_name",description="Название компании", type="text", example="Тест"),
-     *          @OA\Property(property="date_contract_end",description="2022-01-01", type="date", example="2022-01-01"),
+     *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
+     *          @OA\Property(property="date_contract_end",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
+     *          @OA\Property(property="short_name",description="Название компании", type="text", example=""),
      *    )
      * ),
      *     @OA\Response(
@@ -239,8 +249,11 @@ class PlanContractController extends Controller
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
      *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
-     *          @OA\Property(property="date_contract_end",description="0", type="date", example="0"),
+     *          @OA\Property(property="date_contract_end",description="0", type="date", example="2022-01-01"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="0"),
+     *          @OA\Property(property="year",description="0", type="number", example="0"),
+     *          @OA\Property(property="short_name",description="Название компании", type="text", example=""),
      *
      *         )
      *      ),

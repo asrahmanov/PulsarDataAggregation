@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\ContractAndFact;
 use Illuminate\Database\Seeder;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class ContractAndFactSeeder extends Seeder
 {
@@ -11,323 +13,172 @@ class ContractAndFactSeeder extends Seeder
      *
      * @return void
      */
+
+    public function import($filename, $year, $company_id)
+    {
+
+        ini_set('memory_limit', '4096M');
+        ini_set('max_execution_time', 0);
+
+        $reader = IOFactory::createReader('Xlsx');
+        $reader->setReadDataOnly(TRUE);
+
+
+        ContractAndFact::where('year', $year)
+            ->where('company_id', $company_id)
+            ->delete();
+
+        $spreadsheet = $reader->load($filename);
+
+        //-1 что бы обрезать итого
+        $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+        $dataArray = $spreadsheet->getActiveSheet()
+            ->rangeToArray(
+                "A9:AE$num_rows",     // The worksheet range that we want to retrieve
+                '',        // Value that should be returned for empty cells
+                false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                true         // Should the array be indexed by cell row and cell column
+            );
+
+
+        $insertArray = [];
+
+        foreach ($dataArray as $key => $item) {
+            $company_name = $item['A'];
+            if($company_name == 'Итого') {
+                break;
+            }
+
+
+            $plan_1 = $item['H'];
+            $fact_1 = $item['I'];
+
+            $plan_2 = $item['J'];
+            $fact_2 = $item['K'];
+
+            $plan_3 = $item['L'];
+            $fact_3 = $item['M'];
+
+            $plan_4 = $item['N'];
+            $fact_4 = $item['O'];
+
+            $plan_5 = $item['P'];
+            $fact_5 = $item['Q'];
+
+            $plan_6 = $item['R'];
+            $fact_6 = $item['S'];
+
+            $plan_7 = $item['T'];
+            $fact_7 = $item['U'];
+
+            $plan_8 = $item['V'];
+            $fact_8 = $item['W'];
+
+            $plan_9 = $item['X'];
+            $fact_9 = $item['Y'];
+
+            $plan_10 = $item['Z'];
+            $fact_10 = $item['AA'];
+
+            $plan_11 = $item['AB'];
+            $fact_11 = $item['AC'];
+
+            $plan_12 = $item['AD'];
+            $fact_12 = $item['AE'];
+
+
+
+
+            $insertArray[] = [
+                "company_name" => $company_name,
+                "company_id" => $company_id,
+                'year' => $year,
+
+                'plan_1' => $plan_1,
+                'plan_2' => $plan_2,
+                'plan_3' => $plan_3,
+                'plan_4' => $plan_4,
+                'plan_5' => $plan_5,
+                'plan_6' => $plan_6,
+                'plan_7' => $plan_7,
+                'plan_8' => $plan_8,
+                'plan_9' => $plan_9,
+                'plan_10' => $plan_10,
+                'plan_11' => $plan_11,
+                'plan_12' => $plan_12,
+
+                'fact_1' => $fact_1,
+                'fact_2' => $fact_2,
+                'fact_3' => $fact_3,
+                'fact_4' => $fact_4,
+                'fact_5' => $fact_5,
+                'fact_6' => $fact_6,
+                'fact_7' => $fact_7,
+                'fact_8' => $fact_8,
+                'fact_9' => $fact_9,
+                'fact_10' => $fact_10,
+                'fact_11' => $fact_11,
+                'fact_12' => $fact_12
+
+            ];
+            \DB::table('contract_and_fact')->insert($insertArray);
+        }
+
+
+    }
+
+
     public function run()
     {
-        \DB::table('contract_and_fact')->insert([
-            [
-                'company_name'=>'Научное отделение № 10 (НО № 10)',
-                'fact_1' => '0',
-                'plan_1' => '0',
 
-                'fact_2' => '0',
-                'plan_2' => '0',
 
-                'fact_3' => '0',
-                'plan_3' => '0',
+        $filename_2021 = storage_path('app/contractAndFact/17/2021/Контрактация и факт.xlsx');
+        $filename_2022 = storage_path('app/contractAndFact/17/2022/Контрактация и факт.xlsx');
+        $filename_2023 = storage_path('app/contractAndFact/17/2023/Контрактация и факт.xlsx');
 
-                'fact_4' => '0',
-                'plan_4' => '0',
+        if (file_exists($filename_2021)) {
+            $this->import($filename_2021, 2021, 17);
+        } else {
+            echo "Файл {$filename_2021} не найден " . PHP_EOL;
+        }
 
-                'fact_5' => '0',
-                'plan_5' => '0',
+        if (file_exists($filename_2022)) {
+            $this->import($filename_2022, 2022, 17);
+        } else {
+            echo "Файл {$filename_2022} не найден " . PHP_EOL;
+        }
 
-                'fact_6' => '0',
-                'plan_6' => '0',
+        if (file_exists($filename_2023)) {
+            $this->import($filename_2023, 2023, 17);
+        } else {
+            echo "Файл {$filename_2023} не найден " . PHP_EOL;
+        }
 
-                'fact_7' => '0',
-                'plan_7' => '0',
 
-                'fact_8' => '0',
-                'plan_8' => '0',
+        $filename_2021 = storage_path('app/contractAndFact/36/2021/Контрактация и факт.xlsx');
+        $filename_2022 = storage_path('app/contractAndFact/36/2022/Контрактация и факт.xlsx');
+        $filename_2023 = storage_path('app/contractAndFact/36/2023/Контрактация и факт.xlsx');
 
-                'fact_9' => '0',
-                'plan_9' => '30051.48',
+        if (file_exists($filename_2021)) {
+            $this->import($filename_2021, 2021, 36);
+        } else {
+            echo "Файл {$filename_2021} не найден " . PHP_EOL;
+        }
 
-                'fact_10' => '0',
-                'plan_10' => '0',
+        if (file_exists($filename_2022)) {
+            $this->import($filename_2022, 2022, 36);
+        } else {
+            echo "Файл {$filename_2022} не найден " . PHP_EOL;
+        }
 
-                'fact_11' => '0',
-                'plan_11' => '65647.03',
+        if (file_exists($filename_2023)) {
+            $this->import($filename_2023, 2023, 36);
+        } else {
+            echo "Файл {$filename_2023} не найден " . PHP_EOL;
+        }
 
-                'fact_12' => '0',
-                'plan_12' => '2469792.81',
-            ],
 
-            [
-                'company_name'=>'Научное отделение № 4 (НО № 4)',
-                'fact_1' => '27856.74',
-                'plan_1' => '27856.74',
-
-                'fact_2' => '26411.34',
-                'plan_2' => '26411.34',
-
-                'fact_3' => '41326.01',
-                'plan_3' => '41326.01',
-
-                'fact_4' => '26598.12',
-                'plan_4' => '26598.12',
-
-                'fact_5' => '24326.26',
-                'plan_5' => '24326.26',
-
-                'fact_6' => '24456.97',
-                'plan_6' => '24456.97',
-
-                'fact_7' => '35130.06',
-                'plan_7' => '35130.06',
-
-                'fact_8' => '20920.95',
-                'plan_8' => '35110.89',
-
-                'fact_9' => '0',
-                'plan_9' => '8593.51',
-
-                'fact_10' => '0',
-                'plan_10' => '172440.36',
-
-                'fact_11' => '0',
-                'plan_11' => '101315.21',
-
-                'fact_12' => '0',
-                'plan_12' => '106411.05',
-            ],
-
-            [
-                'company_name'=>'Научное отделение № 5 - Испытательный центр (НО № 5 - ИЦ)',
-                'fact_1' => '2323.53',
-                'plan_1' => '2323.53',
-
-                'fact_2' => '2284.37',
-                'plan_2' => '2284.37',
-
-                'fact_3' => '1632.7',
-                'plan_3' => '1632.7',
-
-                'fact_4' => '4690.58',
-                'plan_4' => '4690.58',
-
-                'fact_5' => '2736.81',
-                'plan_5' => '2736.81',
-
-                'fact_6' => '2533.53',
-                'plan_6' => '2533.53',
-
-                'fact_7' => '3243.72',
-                'plan_7' => '3243.72',
-
-                'fact_8' => '2555.13',
-                'plan_8' => '2694.69',
-
-                'fact_9' => '0',
-                'plan_9' => '1590.56',
-
-                'fact_10' => '0',
-                'plan_10' => '1590.56',
-
-                'fact_11' => '0',
-                'plan_11' => '1590.56',
-
-                'fact_12' => '0',
-                'plan_12' => '2926.4',
-            ],
-
-            [
-                'company_name'=>'Научное отделение № 7 (НО № 7)',
-                'fact_1' => '127326.99',
-                'plan_1' => '127326.99',
-
-                'fact_2' => '110138.60',
-                'plan_2' => '110138.60',
-
-                'fact_3' => '117468.67',
-                'plan_3' => '117468.67',
-
-                'fact_4' => '118679.02',
-                'plan_4' => '118679.02',
-
-                'fact_5' => '117459.25',
-                'plan_5' => '117459.25',
-
-                'fact_6' => '116723.53',
-                'plan_6' => '116723.53',
-
-                'fact_7' => '102878.35',
-                'plan_7' => '102878.35',
-
-                'fact_8' => '50189.72',
-                'plan_8' => '556725.9',
-
-                'fact_9' => '0',
-                'plan_9' => '154220.14',
-
-                'fact_10' => '0',
-                'plan_10' => '99895.5',
-
-                'fact_11' => '0',
-                'plan_11' => '106323.71',
-
-                'fact_12' => '0',
-                'plan_12' => '93380.29',
-            ],
-
-
-            [
-                'company_name'=>'Научное отделение № 8 (НО № 8)',
-                'fact_1' => '18486.1',
-                'plan_1' => '18486.1',
-
-                'fact_2' => '11245.6',
-                'plan_2' => '11245.6',
-
-                'fact_3' => '24544',
-                'plan_3' => '24544',
-
-                'fact_4' => '16315',
-                'plan_4' => '16315',
-
-                'fact_5' => '45354',
-                'plan_5' => '45354',
-
-                'fact_6' => '40161',
-                'plan_6' => '40161',
-
-                'fact_7' => '5046.28',
-                'plan_7' => '5046.28',
-
-                'fact_8' => '2129',
-                'plan_8' => '20388.5',
-
-                'fact_9' => '0',
-                'plan_9' => '26758.8',
-
-                'fact_10' => '0',
-                'plan_10' => '243764',
-
-                'fact_11' => '0',
-                'plan_11' => '85097.4',
-
-                'fact_12' => '0',
-                'plan_12' => '8161',
-            ],
-
-
-            [
-                'company_name'=>'Научное отделение № 9 (НО № 9)',
-                'fact_1' => '3173.02',
-                'plan_1' => '3173.02',
-
-                'fact_2' => '0',
-                'plan_2' => '0',
-
-                'fact_3' => '21541.13',
-                'plan_3' => '21541.13',
-
-                'fact_4' => '4590.4',
-                'plan_4' => '4590.4',
-
-                'fact_5' => '4573.8',
-                'plan_5' => '4573.8',
-
-                'fact_6' => '607.71',
-                'plan_6' => '607.71',
-
-                'fact_7' => '21780.69',
-                'plan_7' => '21780.69',
-
-                'fact_8' => '0',
-                'plan_8' => '0',
-
-                'fact_9' => '0',
-                'plan_9' => '17300.25',
-
-                'fact_10' => '0',
-                'plan_10' => '42086.9',
-
-                'fact_11' => '0',
-                'plan_11' => '382406.35',
-
-                'fact_12' => '0',
-                'plan_12' => '413053.41',
-            ],
-
-            [
-                'company_name'=>'Научное отделение сопровождения НИОКР и информационных систем (НО СНИОКР и ИС)',
-                'fact_1' => '89.95',
-                'plan_1' => '89.95',
-
-                'fact_2' => '78.12',
-                'plan_2' => '78.12',
-
-                'fact_3' => '342.71',
-                'plan_3' => '342.71',
-
-                'fact_4' => '281.46',
-                'plan_4' => '281.46',
-
-                'fact_5' => '626.93',
-                'plan_5' => '626.93',
-
-                'fact_6' => '239.09',
-                'plan_6' => '239.09',
-
-                'fact_7' => '348.73',
-                'plan_7' => '348.73',
-
-                'fact_8' => '222.09',
-                'plan_8' => '222.09',
-
-                'fact_9' => '0',
-                'plan_9' => '0',
-
-                'fact_10' => '0',
-                'plan_10' => '0',
-
-                'fact_11' => '0',
-                'plan_11' => '0',
-
-                'fact_12' => '0',
-                'plan_12' => '0',
-            ],
-
-            [
-                'company_name'=>'Отдел капитального строительства (ОКС)',
-                'fact_1' => '0',
-                'plan_1' => '0',
-
-                'fact_2' => '0',
-                'plan_2' => '0',
-
-                'fact_3' => '0',
-                'plan_3' => '0',
-
-                'fact_4' => '0',
-                'plan_4' => '0',
-
-                'fact_5' => '0',
-                'plan_5' => '0',
-
-                'fact_6' => '0',
-                'plan_6' => '0',
-
-                'fact_7' => '0',
-                'plan_7' => '0',
-
-                'fact_8' => '0',
-                'plan_8' => '0',
-
-                'fact_9' => '0',
-                'plan_9' => '0',
-
-                'fact_10' => '0',
-                'plan_10' => '0',
-
-                'fact_11' => '0',
-                'plan_11' => '0',
-
-                'fact_12' => '0',
-                'plan_12' => '0',
-            ],
-
-        ]);
     }
 }

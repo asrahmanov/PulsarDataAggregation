@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class OperationalPlan extends Model
 {
@@ -19,6 +19,8 @@ class OperationalPlan extends Model
     protected $fillable=[
         "company_name",
         "short_name",
+        "company_id",
+        "year",
         "plan_1",
         "plan_2",
         "plan_3",

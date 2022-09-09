@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * App\Models\ContractAndFact
@@ -87,6 +87,8 @@ class ContractAndFact extends Model
 
     protected $fillable=[
         "company_name",
+        "company_id",
+        "year",
         "fact_1",
         "plan_1",
         "fact_2",
