@@ -165,5 +165,157 @@ class BudgetSeeder extends Seeder
 
 
 
+
+
+
+
+
+
+        // Для НПП ПУЛЬСАР
+
+
+        $filename = storage_path('app/budget/36/2022/Бюджет.xlsx');
+
+
+
+        if (file_exists($filename)) {
+
+            Budget::where('year','2022')
+                ->where('company_id', '36')
+                ->delete();
+
+            $spreadsheet = $reader->load($filename);
+
+            //-1 что бы обрезать итого
+            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+            $dataArray = $spreadsheet->getActiveSheet()
+                ->rangeToArray(
+                    "A2:C$num_rows",     // The worksheet range that we want to retrieve
+                    '',        // Value that should be returned for empty cells
+                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                    true         // Should the array be indexed by cell row and cell column
+                );
+
+
+            $insertArray = [];
+
+            foreach ($dataArray as $key => $item) {
+                $sum = $item['A'];
+                $date = $item['B'];
+
+                $date = explode('.', $date);
+                $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+
+                $insertArray[] = [
+                    "date_budget" => $date_budget,
+                    "sum" => $sum,
+                    'company_id' => 36,
+                    'year' => $date[2]
+                ];
+            }
+
+
+            \DB::table('budget')->insert($insertArray);
+        } else {
+            echo "Файл не найден";
+        }
+
+        $filename = storage_path('app/budget/36/2021/Бюджет.xlsx');
+
+        if (file_exists($filename)) {
+
+            Budget::where('year','2021')
+                ->where('company_id', '36')
+                ->delete();
+            $spreadsheet = $reader->load($filename);
+
+            //-1 что бы обрезать итого
+            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+            $dataArray = $spreadsheet->getActiveSheet()
+                ->rangeToArray(
+                    "A2:C$num_rows",     // The worksheet range that we want to retrieve
+                    '',        // Value that should be returned for empty cells
+                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                    true         // Should the array be indexed by cell row and cell column
+                );
+
+
+            $insertArray = [];
+
+            foreach ($dataArray as $key => $item) {
+                $sum = $item['A'];
+                $date = $item['B'];
+
+                $date = explode('.', $date);
+                $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+
+                $insertArray[] = [
+                    "date_budget" => $date_budget,
+                    "sum" => $sum,
+                    'company_id' => 36,
+                    'year' => $date[2]
+                ];
+            }
+
+
+            \DB::table('budget')->insert($insertArray);
+        } else {
+            echo "Файл не найден";
+        }
+
+
+
+        $filename = storage_path('app/budget/36/2023/Бюджет.xlsx');
+
+        if (file_exists($filename)) {
+
+            Budget::where('year','2023')
+                ->where('company_id', '36')
+                ->delete();
+
+            $spreadsheet = $reader->load($filename);
+
+            //-1 что бы обрезать итого
+            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+            $dataArray = $spreadsheet->getActiveSheet()
+                ->rangeToArray(
+                    "A2:C$num_rows",     // The worksheet range that we want to retrieve
+                    '',        // Value that should be returned for empty cells
+                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                    true         // Should the array be indexed by cell row and cell column
+                );
+
+
+            $insertArray = [];
+
+            foreach ($dataArray as $key => $item) {
+                $sum = $item['A'];
+                $date = $item['B'];
+
+                $date = explode('.', $date);
+                $date_budget = "{$date[2]}-{$date[1]}-{$date[0]}";
+
+                $insertArray[] = [
+                    "date_budget" => $date_budget,
+                    "sum" => $sum,
+                    'company_id' => 36,
+                    'year' => $date[2]
+                ];
+            }
+
+
+            \DB::table('budget')->insert($insertArray);
+        } else {
+            echo "Файл не найден";
+        }
+
+
+
     }
 }

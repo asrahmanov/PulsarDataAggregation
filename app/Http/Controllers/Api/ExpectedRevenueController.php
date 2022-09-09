@@ -133,6 +133,8 @@ class ExpectedRevenueController extends Controller
      *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
      *          @OA\Property(property="mount",description="0", type="text", example="Август"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *    )
      * ),
      *     @OA\Response(
@@ -142,8 +144,10 @@ class ExpectedRevenueController extends Controller
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
      *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
-     *          @OA\Property(property="mount",description="Август", type="text", example="Август"),
+     *          @OA\Property(property="mount",description="0", type="text", example="Август"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *         )
      *      ),
      *     @OA\Response(
@@ -227,9 +231,11 @@ class ExpectedRevenueController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *          @OA\Property(property="company_name",description="Название компании", type="text", example="Тест"),
-     *          @OA\Property(property="mount",description="Август", type="text", example="Август"),
+     *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
+     *          @OA\Property(property="mount",description="0", type="text", example="Август"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *    )
      * ),
      *     @OA\Response(
@@ -239,8 +245,10 @@ class ExpectedRevenueController extends Controller
      *             type="object",
      *          @OA\Property(property="id", type="number", example="1"),
      *          @OA\Property(property="company_name",description="Название компании", type="text", example=""),
-     *          @OA\Property(property="mount",description="Август", type="text", example="Август"),
+     *          @OA\Property(property="mount",description="0", type="text", example="Август"),
      *          @OA\Property(property="sum",description="0", type="number", example="0"),
+     *          @OA\Property(property="company_id",description="0", type="number", example="17"),
+     *          @OA\Property(property="year",description="0", type="number", example="2022"),
      *
      *         )
      *      ),

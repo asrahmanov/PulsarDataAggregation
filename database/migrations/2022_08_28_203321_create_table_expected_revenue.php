@@ -17,6 +17,8 @@ class CreateTableExpectedRevenue extends Migration
             $table->id();
             $table->string('company_name');
             $table->string('mount');
+            $table->integer('year');
+            $table->integer('company_id');
             $table->DOUBLE('sum')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();;
