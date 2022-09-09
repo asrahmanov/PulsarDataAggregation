@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\ExpectedRevenue;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
@@ -21,325 +20,45 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $filename = storage_path('app/Exp/17/2021/exp.xlsx');
+        $spreadsheet = $reader->load(storage_path('app/exp/17/2022/exp.xlsx'));
+
+        //-1 что бы обрезать итого
+        $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
+
+        $dataArray = $spreadsheet->getActiveSheet()
+            ->rangeToArray(
+                "A2:D$num_rows",     // The worksheet range that we want to retrieve
+                '',        // Value that should be returned for empty cells
+                false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
+                true         // Should the array be indexed by cell row and cell column
+            );
 
 
-        if (file_exists($filename)) {
 
-            ExpectedRevenue::where('company_id', '17')
-                ->where('year','2021')
-                ->forceDelete();
+        $insertArray =[];
 
-            $spreadsheet = $reader->load($filename);
+        foreach ($dataArray as $key => $item){
+            $company_name = $item['B'];
 
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
-
-
-            $insertArray = [];
-
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
-
-                if ($company_name == '') {
-                    break;
-                }
-
-                $mount = $item['C'];
-                $sum = $item['D'];
-
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "company_id" => 17,
-                    "year" => 2021,
-                    "sum" => $sum
-                ];
+            if($company_name == '' ){
+                break;
             }
 
+            $mount = $item['C'];
+            $sum = $item['D'];
 
-            \DB::table('expected_revenue')->insert($insertArray);
-        } else {
-             echo "Файл {$filename} не найден " . PHP_EOL;
+            $insertArray[] = [
+                "company_name"=>$company_name,
+                "mount"=>$mount,
+                "company_id"=> '17',
+                "year"=> '2022',
+                "sum"=>$sum
+            ];
         }
 
 
 
-
-        $filename = storage_path('app/Exp/36/2021/exp.xlsx');
-
-
-        if (file_exists($filename)) {
-
-            ExpectedRevenue::where('company_id', '36')
-                ->where('year','2021')
-                ->forceDelete();
-
-            $spreadsheet = $reader->load($filename);
-
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
-
-
-            $insertArray = [];
-
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
-
-                if ($company_name == '') {
-                    break;
-                }
-
-                $mount = $item['C'];
-                $sum = $item['D'];
-
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "company_id" => 36,
-                    "year" => 2021,
-                    "sum" => $sum
-                ];
-            }
-
-
-            \DB::table('expected_revenue')->insert($insertArray);
-        } else {
-             echo "Файл {$filename} не найден " . PHP_EOL;
-        }
-
-
-
-
-
-
-        $filename = storage_path('app/Exp/17/2022/exp.xlsx');
-
-
-        if (file_exists($filename)) {
-
-//            ExpectedRevenue::where('company_id', '17')
-//                ->where('year','2022')
-//                ->forceDelete();
-
-            $spreadsheet = $reader->load($filename);
-
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
-
-
-            $insertArray = [];
-
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
-
-                if ($company_name == '') {
-                    break;
-                }
-
-                $mount = $item['C'];
-                $sum = $item['D'];
-
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "company_id" => 17,
-                    "year" => 2022,
-                    "sum" => $sum
-                ];
-            }
-
-
-            \DB::table('expected_revenue')->insert($insertArray);
-        } else {
-            echo "Файл {$filename} не найден " . PHP_EOL;
-        }
-
-
-
-        $filename = storage_path('app/Exp/36/2022/exp.xlsx');
-
-
-        if (file_exists($filename)) {
-
-            ExpectedRevenue::where('company_id', '36')
-                ->where('year','2022')
-                ->forceDelete();
-
-            $spreadsheet = $reader->load($filename);
-
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
-
-
-            $insertArray = [];
-
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
-
-                if ($company_name == '') {
-                    break;
-                }
-
-                $mount = $item['C'];
-                $sum = $item['D'];
-
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "company_id" => 36,
-                    "year" => 2002,
-                    "sum" => $sum
-                ];
-            }
-
-
-            \DB::table('expected_revenue')->insert($insertArray);
-        } else {
-            echo "Файл {$filename} не найден " . PHP_EOL;
-        }
-
-
-
-        $filename = storage_path('app/Exp/17/2023/exp.xlsx');
-
-
-        if (file_exists($filename)) {
-
-            ExpectedRevenue::where('company_id', '17')
-                ->where('year','2023')
-                ->forceDelete();
-
-            $spreadsheet = $reader->load($filename);
-
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
-
-
-            $insertArray = [];
-
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
-
-                if ($company_name == '') {
-                    break;
-                }
-
-                $mount = $item['C'];
-                $sum = $item['D'];
-
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "company_id" => 17,
-                    "year" => 2023,
-                    "sum" => $sum
-                ];
-            }
-
-
-            \DB::table('expected_revenue')->insert($insertArray);
-        } else {
-            echo "Файл {$filename} не найден " . PHP_EOL;
-        }
-
-
-
-        $filename = storage_path('app/Exp/36/2023/exp.xlsx');
-
-
-        if (file_exists($filename)) {
-
-            ExpectedRevenue::where('company_id', '36')
-                ->where('year','2023')
-                ->forceDelete();
-
-            $spreadsheet = $reader->load($filename);
-
-            //-1 что бы обрезать итого
-            $num_rows = $spreadsheet->getActiveSheet()->getHighestRow();
-
-            $dataArray = $spreadsheet->getActiveSheet()
-                ->rangeToArray(
-                    "A2:D$num_rows",     // The worksheet range that we want to retrieve
-                    '',        // Value that should be returned for empty cells
-                    false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
-                    true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
-                    true         // Should the array be indexed by cell row and cell column
-                );
-
-
-            $insertArray = [];
-
-            foreach ($dataArray as $key => $item) {
-                $company_name = $item['B'];
-
-                if ($company_name == '') {
-                    break;
-                }
-
-                $mount = $item['C'];
-                $sum = $item['D'];
-
-                $insertArray[] = [
-                    "company_name" => $company_name,
-                    "mount" => $mount,
-                    "company_id" => 36,
-                    "year" => 2023,
-                    "sum" => $sum
-                ];
-            }
-
-
-            \DB::table('expected_revenue')->insert($insertArray);
-        } else {
-            echo "Файл {$filename} не найден " . PHP_EOL;
-        }
-
+        \DB::table('expected_revenue')->insert($insertArray);
     }
 }
