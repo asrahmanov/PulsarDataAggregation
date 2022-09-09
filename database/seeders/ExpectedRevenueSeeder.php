@@ -20,7 +20,7 @@ class ExpectedRevenueSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        $filename = storage_path('app/31.08.22 форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/exp/17/2022/exp.xlsx');
 
         if (file_exists($filename)) {
 
