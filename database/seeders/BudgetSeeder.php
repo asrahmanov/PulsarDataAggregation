@@ -66,7 +66,7 @@ class BudgetSeeder extends Seeder
 
             \DB::table('budget')->insert($insertArray);
         } else {
-            echo "Файл не найден";
+             echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
         $filename = storage_path('app/budget/17/2021/Бюджет.xlsx');
@@ -111,7 +111,7 @@ class BudgetSeeder extends Seeder
 
             \DB::table('budget')->insert($insertArray);
         } else {
-            echo "Файл не найден";
+             echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
@@ -159,7 +159,7 @@ class BudgetSeeder extends Seeder
 
             \DB::table('budget')->insert($insertArray);
         } else {
-            echo "Файл не найден";
+            echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
@@ -219,7 +219,7 @@ class BudgetSeeder extends Seeder
 
             \DB::table('budget')->insert($insertArray);
         } else {
-            echo "Файл не найден";
+             echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
         $filename = storage_path('app/budget/36/2021/Бюджет.xlsx');
@@ -264,7 +264,7 @@ class BudgetSeeder extends Seeder
 
             \DB::table('budget')->insert($insertArray);
         } else {
-            echo "Файл не найден";
+             echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
@@ -312,7 +312,7 @@ class BudgetSeeder extends Seeder
 
             \DB::table('budget')->insert($insertArray);
         } else {
-            echo "Файл не найден";
+             echo "Файл {$filename} не найден " . PHP_EOL;
         }
 
 
