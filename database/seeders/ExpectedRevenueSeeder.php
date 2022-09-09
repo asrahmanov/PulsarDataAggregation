@@ -131,7 +131,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-        $filename = storage_path('app/ExpectedRevenue/17/2022/форма по ожидаемой выручке.xlsx');
+        $filename = storage_path('app/ExpectedRevenue/17/2022/форма по ожидаемой выручке.xlsx');
 
 
         if (file_exists($filename)) {
