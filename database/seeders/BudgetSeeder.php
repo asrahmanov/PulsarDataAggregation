@@ -23,7 +23,7 @@ class BudgetSeeder extends Seeder
 
         $filename = storage_path('SHARE/Данные для дашборда по выручке/АО ГЗ Пульсар/2022/Бюджет.xlsx');
 
-        $dir    = storage_path('/SHARE');
+        $dir    = storage_path('SHARE');
         $files1 = scandir($dir);
         var_dump($files1);
 
