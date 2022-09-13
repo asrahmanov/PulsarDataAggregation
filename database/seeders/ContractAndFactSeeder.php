@@ -35,7 +35,7 @@ class ContractAndFactSeeder extends Seeder
 
         $dataArray = $spreadsheet->getActiveSheet()
             ->rangeToArray(
-                "A9:AE$num_rows",     // The worksheet range that we want to retrieve
+                "A9:AF$num_rows",     // The worksheet range that we want to retrieve
                 '',        // Value that should be returned for empty cells
                 false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
                 true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
@@ -88,6 +88,7 @@ class ContractAndFactSeeder extends Seeder
 
             $plan_12 = $item['AD'];
             $fact_12 = $item['AE'];
+            $ob = $item['AF'];
 
 
 
@@ -121,7 +122,8 @@ class ContractAndFactSeeder extends Seeder
                 'fact_9' => $fact_9,
                 'fact_10' => $fact_10,
                 'fact_11' => $fact_11,
-                'fact_12' => $fact_12
+                'fact_12' => $fact_12,
+                'ob' => $ob,
 
             ];
             \DB::table('contract_and_fact')->insert($insertArray);
