@@ -42,9 +42,11 @@ class PlanContractSeeder extends Seeder
             );
 
 
-        $insertArray = [];
 
         foreach ($dataArray as $key => $item) {
+            $insertArray = [];
+
+
             $company_name = $item['A'];
             $short_name = $item['B'];
             $date = $item['C'];

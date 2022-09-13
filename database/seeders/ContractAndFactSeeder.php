@@ -43,9 +43,10 @@ class ContractAndFactSeeder extends Seeder
             );
 
 
-        $insertArray = [];
 
         foreach ($dataArray as $key => $item) {
+            $insertArray = [];
+
             $company_name = $item['A'];
             if($company_name == 'Итого') {
                 break;

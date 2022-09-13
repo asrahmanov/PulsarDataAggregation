@@ -45,9 +45,10 @@ class BudgetSeeder extends Seeder
             );
 
 
-        $insertArray = [];
 
         foreach ($dataArray as $key => $item) {
+            $insertArray = [];
+
             $sum = $item['A'];
             $date = $item['B'];
 
@@ -60,6 +61,7 @@ class BudgetSeeder extends Seeder
                 'company_id' => $company_id,
                 'year' => $year
             ];
+
             \DB::table('budget')->insert($insertArray);
         }
 
