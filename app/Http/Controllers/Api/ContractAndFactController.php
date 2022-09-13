@@ -131,6 +131,7 @@ class ContractAndFactController extends Controller
      *          @OA\Property(property="plan_11",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_12",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_12",description="0", type="number", example="0"),
+     *          @OA\Property(property="ob",description="0", type="number", example="0"),
      *    )
      * ),
      *     @OA\Response(
@@ -166,6 +167,7 @@ class ContractAndFactController extends Controller
      *          @OA\Property(property="plan_11",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_12",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_12",description="0", type="number", example="0"),
+     *          @OA\Property(property="ob",description="0", type="number", example="0"),
      *         )
      *      ),
      *     @OA\Response(
@@ -276,6 +278,7 @@ class ContractAndFactController extends Controller
      *          @OA\Property(property="plan_11",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_12",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_12",description="0", type="number", example="0"),
+     *          @OA\Property(property="ob",description="0", type="number", example="0"),
      *    )
      * ),
      *     @OA\Response(
@@ -311,6 +314,7 @@ class ContractAndFactController extends Controller
      *          @OA\Property(property="plan_11",description="0", type="number", example="0"),
      *          @OA\Property(property="fact_12",description="0", type="number", example="0"),
      *          @OA\Property(property="plan_12",description="0", type="number", example="0"),
+     *          @OA\Property(property="ob",description="0", type="number", example="0"),
      *
      *         )
      *      ),

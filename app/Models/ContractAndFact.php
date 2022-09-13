@@ -113,6 +113,7 @@ class ContractAndFact extends Model
         "plan_11",
         "fact_12",
         "plan_12",
+        "ob",
     ];
 
     protected $hidden=[
