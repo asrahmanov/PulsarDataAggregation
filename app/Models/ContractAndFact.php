@@ -87,6 +87,7 @@ class ContractAndFact extends Model
 
     protected $fillable=[
         "company_name",
+        "short_name",
         "company_id",
         "year",
         "fact_1",

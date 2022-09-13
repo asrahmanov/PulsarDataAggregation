@@ -52,6 +52,7 @@ class ContractAndFactSeeder extends Seeder
                 break;
             }
 
+            $short_name = $item['G'];
 
             $plan_1 = $item['H'];
             $fact_1 = $item['I'];
@@ -95,6 +96,7 @@ class ContractAndFactSeeder extends Seeder
 
             $insertArray[] = [
                 "company_name" => $company_name,
+                "short_name" => $short_name,
                 "company_id" => $company_id,
                 'year' => $year,
 
