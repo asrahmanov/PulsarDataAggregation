@@ -35,7 +35,7 @@ class ContractAndFactSeeder extends Seeder
 
         $dataArray = $spreadsheet->getActiveSheet()
             ->rangeToArray(
-                "A9:AF$num_rows",     // The worksheet range that we want to retrieve
+                "A11:AF$num_rows",     // The worksheet range that we want to retrieve
                 '',        // Value that should be returned for empty cells
                 false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
                 true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
@@ -52,7 +52,7 @@ class ContractAndFactSeeder extends Seeder
                 break;
             }
 
-            $short_name = $item['G'];
+            $short_name = $item['F'];
 
             $plan_1 = $item['H'];
             $fact_1 = $item['I'];
