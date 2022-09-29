@@ -34,7 +34,7 @@ class PlanContractSeeder extends Seeder
 
         $dataArray = $spreadsheet->getActiveSheet()
             ->rangeToArray(
-                "A3:D$num_rows",     // The worksheet range that we want to retrieve
+                "A2:D$num_rows",     // The worksheet range that we want to retrieve
                 '',        // Value that should be returned for empty cells
                 false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
                 true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
