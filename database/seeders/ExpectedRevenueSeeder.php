@@ -67,7 +67,8 @@ class ExpectedRevenueSeeder extends Seeder
 
 
 
-            \DB::table('expected_revenue')->insert($insertArray);
+            $result = \DB::table('expected_revenue')->insert($insertArray);
+
         }
 
 
