@@ -1,4 +1,4 @@
-<h1 style="text-align: center;color: red">PULSAR DATA AGGREGATION</h1>
+<h1 style="text-align: center;color: #ff0000">PULSAR DATA AGGREGATION</h1>
 
 <h1 style="text-align: center;color: #6610f2">Локально</h1>  
 <pre>

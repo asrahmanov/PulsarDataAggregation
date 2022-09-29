@@ -61,7 +61,7 @@ class OperationalPlanSeeder extends Seeder
             $plan_12 = $item['N'];
 
             if($company_name == '') {
-                break;
+               continue;
             }
 
             $sum = $item['C'];

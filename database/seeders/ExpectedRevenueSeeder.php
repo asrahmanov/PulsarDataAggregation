@@ -48,7 +48,7 @@ class ExpectedRevenueSeeder extends Seeder
 
 
             if($company_name == ''){
-                break;
+                continue;
             }
 
 

@@ -55,13 +55,15 @@ class PlanContractSeeder extends Seeder
             }
 
             if ($company_name == '') {
-                break;
+               continue;
             }
+
+
 
             $date = explode('.', $date);
 
-            if (!isset($date[2])) {
-                break;
+            if(!isset($date[2])) {
+                continue;
             }
 
 
