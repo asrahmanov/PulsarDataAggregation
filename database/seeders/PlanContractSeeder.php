@@ -57,7 +57,15 @@ class PlanContractSeeder extends Seeder
             if ($company_name == '') {
                 break;
             }
+
             $date = explode('.', $date);
+
+            if (!isset($date[2])) {
+                break;
+            }
+
+
+
             $date_contract_end = "{$date[2]}-{$date[1]}-{$date[0]}";
             $sum = $item['D'];
 
