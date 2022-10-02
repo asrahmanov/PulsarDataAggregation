@@ -489,6 +489,11 @@
                                         "description": "0",
                                         "type": "number",
                                         "example": "0"
+                                    },
+                                    "ob": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
                                     }
                                 },
                                 "type": "object"
@@ -633,6 +638,11 @@
                                             "example": "0"
                                         },
                                         "plan_12": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        },
+                                        "ob": {
                                             "description": "0",
                                             "type": "number",
                                             "example": "0"
@@ -938,6 +948,11 @@
                                         "description": "0",
                                         "type": "number",
                                         "example": "0"
+                                    },
+                                    "ob": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "0"
                                     }
                                 },
                                 "type": "object"
@@ -1085,6 +1100,897 @@
                                             "description": "0",
                                             "type": "number",
                                             "example": "0"
+                                        },
+                                        "ob": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                },
+                                                "field2": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field2 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-defect": {
+            "get": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "1d9ad5dae4bb7b18169a83e7058160ac",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "0cd94d1ac6b784c1ef8d7286de573ea9",
+                "requestBody": {
+                    "request": "Create Defect",
+                    "description": "Create Defect Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "description": "-",
+                                        "type": "string",
+                                        "example": "ТРЛО1"
+                                    },
+                                    "event": {
+                                        "description": "1",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "name_product": {
+                                        "description": "-",
+                                        "type": "string",
+                                        "example": "ТРЛО1"
+                                    },
+                                    "date_otk": {
+                                        "description": "-",
+                                        "type": "date",
+                                        "example": "2022-01-01"
+                                    },
+                                    "cover_sheet_number": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "product_drawing": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "name_operation": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "code_operation": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "quantity_operation": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "au_per": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "quantity_effective": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "quantity_fail": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "output_percentage_norm": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "output_percentage_fact": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "tnb": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "other_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "date_defect": {
+                                        "description": "0",
+                                        "type": "date",
+                                        "example": "1"
+                                    },
+                                    "regulatory_cost_rejected_product": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "amount_defect_plan": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "amount_defect_fact": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "code_sto": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "name_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "affiliation_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "sing_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "unit_detection_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "cause_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "name_culprit_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "2022"
+                                    },
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "description": "-",
+                                            "type": "string",
+                                            "example": "ТРЛО1"
+                                        },
+                                        "event": {
+                                            "description": "1",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "name_product": {
+                                            "description": "-",
+                                            "type": "string",
+                                            "example": "ТРЛО1"
+                                        },
+                                        "date_otk": {
+                                            "description": "-",
+                                            "type": "date",
+                                            "example": "2022-01-01"
+                                        },
+                                        "cover_sheet_number": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "product_drawing": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "name_operation": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "code_operation": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "quantity_operation": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "au_per": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "quantity_effective": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "quantity_fail": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "output_percentage_norm": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "output_percentage_fact": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "tnb": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "other_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "date_defect": {
+                                            "description": "0",
+                                            "type": "date",
+                                            "example": "1"
+                                        },
+                                        "regulatory_cost_rejected_product": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "amount_defect_plan": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "amount_defect_fact": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "code_sto": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "name_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "affiliation_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "sing_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "unit_detection_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "cause_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "name_culprit_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "2022"
+                                        },
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "errors",
+                                    "description": "errors object",
+                                    "properties": {
+                                        "errors": {
+                                            "title": "Validation errors",
+                                            "description": "Validation errors object",
+                                            "properties": {
+                                                "field1": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "example": "The field1 field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-defect/get-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "3679cee8bf5fbc07f8b4b51cbaafc9b5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-defect/get-by-name/{name}": {
+            "get": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "aa3b4e06c14082c727f135ddde5f59e7",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-defect/group-by-name/{name}": {
+            "get": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "054c1e49e4222803af8c816558268046",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "1",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/data-aggregation-defect/{id}": {
+            "delete": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "2a1faa2964573240aa52cf06aa316f39",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error Delete",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "is_deleted": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Defect"
+                ],
+                "operationId": "47e08890ad9a8ed1527acb8ba3c759fe",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "request": "Update Defect",
+                    "description": "Update Defect Fields",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    ""
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "description": "-",
+                                        "type": "string",
+                                        "example": "ТРЛО1"
+                                    },
+                                    "event": {
+                                        "description": "1",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "name_product": {
+                                        "description": "-",
+                                        "type": "string",
+                                        "example": "ТРЛО1"
+                                    },
+                                    "date_otk": {
+                                        "description": "-",
+                                        "type": "date",
+                                        "example": "2022-01-01"
+                                    },
+                                    "cover_sheet_number": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "product_drawing": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "name_operation": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "code_operation": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "quantity_operation": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "au_per": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "quantity_effective": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "quantity_fail": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "output_percentage_norm": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "output_percentage_fact": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "tnb": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "other_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "date_defect": {
+                                        "description": "0",
+                                        "type": "date",
+                                        "example": "1"
+                                    },
+                                    "regulatory_cost_rejected_product": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "amount_defect_plan": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "amount_defect_fact": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    },
+                                    "code_sto": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "name_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "affiliation_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "sing_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "unit_detection_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "cause_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "name_culprit_defect": {
+                                        "description": "0",
+                                        "type": "string",
+                                        "example": "1"
+                                    },
+                                    "year": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "2022"
+                                    },
+                                    "company_id": {
+                                        "description": "0",
+                                        "type": "number",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success Create",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "description": "-",
+                                            "type": "string",
+                                            "example": "ТРЛО1"
+                                        },
+                                        "event": {
+                                            "description": "1",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "name_product": {
+                                            "description": "-",
+                                            "type": "string",
+                                            "example": "ТРЛО1"
+                                        },
+                                        "date_otk": {
+                                            "description": "-",
+                                            "type": "date",
+                                            "example": "2022-01-01"
+                                        },
+                                        "cover_sheet_number": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "product_drawing": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "name_operation": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "code_operation": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "quantity_operation": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "au_per": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "quantity_effective": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "quantity_fail": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "output_percentage_norm": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "output_percentage_fact": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "tnb": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "other_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "date_defect": {
+                                            "description": "0",
+                                            "type": "date",
+                                            "example": "1"
+                                        },
+                                        "regulatory_cost_rejected_product": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "amount_defect_plan": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "amount_defect_fact": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
+                                        },
+                                        "code_sto": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "name_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "affiliation_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "sing_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "unit_detection_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "cause_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "name_culprit_defect": {
+                                            "description": "0",
+                                            "type": "string",
+                                            "example": "1"
+                                        },
+                                        "year": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "2022"
+                                        },
+                                        "company_id": {
+                                            "description": "0",
+                                            "type": "number",
+                                            "example": "1"
                                         }
                                     },
                                     "type": "object"

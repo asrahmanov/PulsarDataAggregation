@@ -17,14 +17,12 @@ class Defect extends Model
     protected $dates = ['deleted_at'];
 
 
-//$table->string('name_culprit_defect'); // ФИО виновника брака
-//$table->timestamps();
-
-
 
     protected $fillable=[
+        "name",
         "event",
-        "mame_product",
+        "name_product",
+        "date_otk",
         "cover_sheet_number",
         "product_drawing",
         "name_operation",

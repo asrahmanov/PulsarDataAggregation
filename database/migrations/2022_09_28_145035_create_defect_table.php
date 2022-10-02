@@ -15,8 +15,10 @@ class CreateDefectTable extends Migration
     {
         Schema::create('defect', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->integer('event'); // Номер
-            $table->string('mame_product'); // Наименование изделий
+            $table->string('name_product'); // Наименование изделий
+            $table->date('date_otk'); // Дата предъявления в ОТК
             $table->integer('cover_sheet_number'); // Номер сопроводительного листа
             $table->string('product_drawing'); // Обозначение чертежа полуфабриката
             $table->string('name_operation'); // Наименование операции
@@ -27,8 +29,8 @@ class CreateDefectTable extends Migration
             $table->integer('quantity_fail'); // Потери, шт
             $table->DOUBLE('output_percentage_norm')->unsigned()->default(0);// Процент выхода норма, %
             $table->DOUBLE('output_percentage_fact')->unsigned()->default(0);// Процент выхода факт, %
-            $table->integer('tnb')->unsigned()->default(0);// ТНБ, шт
-            $table->integer('other_defect')->unsigned()->default(0); // Прочий брак, шт.
+            $table->string('tnb');// ТНБ, шт
+            $table->string('other_defect'); // Прочий брак, шт.
             $table->date('date_defect'); // Дата обнаружения брака
             $table->DOUBLE('regulatory_cost_rejected_product')->unsigned()->default(0); // Нормативная себестоимость забракованной продукции (на единицу), руб
             $table->DOUBLE('amount_defect_plan')->unsigned()->default(0); // Сумма брака план, руб
@@ -40,6 +42,8 @@ class CreateDefectTable extends Migration
             $table->string('unit_detection_defect'); // Подразделение обнаружения брака
             $table->string('cause_defect'); // Подразделение - виновник возникновения брака
             $table->string('name_culprit_defect'); // ФИО виновника брака
+            $table->year('year'); // ФИО виновника брака
+            $table->integer('company_id');
             $table->timestamps();
         });
     }

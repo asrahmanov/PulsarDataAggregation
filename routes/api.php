@@ -64,6 +64,18 @@ reg_routes('data-aggregation-budget', \App\Http\Controllers\Api\BudgetController
 );
 
 
+reg_routes('data-aggregation-defect', \App\Http\Controllers\Api\DefectController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
+        ['method' => 'get', 'uri' => 'get-by-name', 'pathParams'=>['name']],
+        ['method' => 'get', 'uri' => 'group-by-name', 'pathParams'=>['name']],
+    ]
+);
+
+
 reg_routes('data-aggregation-plan-contract', \App\Http\Controllers\Api\PlanContractController::class,
     $router,
     [],
