@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ExpectedRevenueSeeder::class,
         OperationalPlanSeeder::class,
         BudgetSeeder::class,
-        DefectSeeder::class
+//        DefectSeeder::class
         ]);
     }
 }
