@@ -166,7 +166,7 @@ class DefectSeeder extends Seeder
                     $amount_defect_fact = str_replace(',', '', $amount_defect_fact); //Меняем точку на запятую
                 }
 
-                if ($amount_defect_fact == '') {
+                if ($amount_defect_fact == '' OR $amount_defect_fact == '000') {
                     $amount_defect_fact = 0;
                 }
 
