@@ -115,6 +115,10 @@ class DefectSeeder extends Seeder
                 $quantity_fail = $item['Q'];
                 $output_percentage_norm = $item['R'];
 
+                if($quantity_effective == '') {
+                    $quantity_effective = 0;
+                }
+
                 if($output_percentage_norm == ''){
                     $output_percentage_norm = 0;
                 }
