@@ -94,7 +94,7 @@ class DefectSeeder extends Seeder
 
                 $date_format = explode('/', $date);
 
-                if (!isset($date[2])) {
+                if (!isset($date_format[2])) {
                     continue;
                 }
 
