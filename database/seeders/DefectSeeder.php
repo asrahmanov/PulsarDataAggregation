@@ -137,7 +137,11 @@ class DefectSeeder extends Seeder
 
                 if ($date_defect != '') {
                     $date__defect_format = explode('/', $date_defect);
-                    $date_defect = "{$date__defect_format[2]}-{$date__defect_format[0]}-{$date__defect_format[1]}";
+                    if(isset($date__defect_format[2])) {
+                        $date_defect = "{$date__defect_format[2]}-{$date__defect_format[0]}-{$date__defect_format[1]}";
+                    } else {
+                        $date_defect = '1970-01-01';
+                    }
                 } else {
                     $date_defect = '1970-01-01';
                 }
