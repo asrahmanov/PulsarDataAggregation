@@ -34,7 +34,7 @@ class ExpectedRevenueSeeder extends Seeder
             ->rangeToArray(
                 "B2:E$num_rows",     // The worksheet range that we want to retrieve
                 '',        // Value that should be returned for empty cells
-                false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
+                true,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
                 true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
                 true         // Should the array be indexed by cell row and cell column
             );
@@ -45,6 +45,13 @@ class ExpectedRevenueSeeder extends Seeder
             $insertArray =[];
             $company_name = $item['B'];
             $short_name = $item['C'];
+            $kod = $item['D'];
+
+            if($kod == '00-000001' OR $kod == '00-000051' OR $kod == '00-000002') {
+                $short_name = 'Прочие';
+                $company_name = 'Прочие';
+            }
+
 
 
             if($company_name == ''){
@@ -52,8 +59,12 @@ class ExpectedRevenueSeeder extends Seeder
             }
 
 
-            $mount = $item['D'];
-            $sum = $item['E'];
+            $mount = $item['E'];
+            $sum = $item['F'];
+
+            if($sum == '') {
+                $sum = 0;
+            }
 
             $insertArray[] = [
                 "company_name"=> $company_name,
