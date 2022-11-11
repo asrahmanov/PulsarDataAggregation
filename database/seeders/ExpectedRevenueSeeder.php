@@ -32,7 +32,7 @@ class ExpectedRevenueSeeder extends Seeder
 
         $dataArray = $spreadsheet->getActiveSheet()
             ->rangeToArray(
-                "B2:E$num_rows",     // The worksheet range that we want to retrieve
+                "B2:F$num_rows",     // The worksheet range that we want to retrieve
                 '',        // Value that should be returned for empty cells
                 true,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
                 true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
