@@ -75,6 +75,8 @@ class ExpectedRevenueSeeder extends Seeder
                 "sum"=> $sum
             ];
 
+            var_dump($insertArray);
+
 
 
 
