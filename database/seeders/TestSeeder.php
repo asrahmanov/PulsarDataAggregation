@@ -220,7 +220,7 @@ class TestSeeder extends Seeder
     public function run()
     {
 
-        $filename_2021 = storage_path('SHARE/TEST.txt');
+        $filename_2021 = storage_path('SHARE/');
 
         if (file_exists($filename_2021)) {
             echo "Файл {$filename_2021}  ЕСТЬ " . PHP_EOL;
