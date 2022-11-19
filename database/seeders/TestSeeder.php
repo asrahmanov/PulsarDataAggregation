@@ -210,7 +210,7 @@ class TestSeeder extends Seeder
 
                 var_dump($insertArray);
 
-                \DB::table('defect')->insert($insertArray);
+//                \DB::table('defect')->insert($insertArray);
             }
         }
 
@@ -220,7 +220,7 @@ class TestSeeder extends Seeder
     public function run()
     {
 
-        $filename_2021 = storage_path('app/defect/defect.xlsx');
+        $filename_2021 = storage_path('SHARE/TEST.txt');
 
         if (file_exists($filename_2021)) {
             echo "Файл {$filename_2021}  ЕСТЬ " . PHP_EOL;
