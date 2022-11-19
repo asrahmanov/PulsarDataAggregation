@@ -35,7 +35,7 @@ class ContractAndFactSeeder extends Seeder
 
         $dataArray = $spreadsheet->getActiveSheet()
             ->rangeToArray(
-                "A11:AF$num_rows",     // The worksheet range that we want to retrieve
+                "A11:AG$num_rows",     // The worksheet range that we want to retrieve
                 '',        // Value that should be returned for empty cells
                 false,        // Should formulas be calculated (the equivalent of getCalculatedValue() for each cell)
                 true,        // Should values be formatted (the equivalent of getFormattedValue() for each cell)
@@ -52,44 +52,86 @@ class ContractAndFactSeeder extends Seeder
                 break;
             }
 
-            $short_name = $item['F'];
+            $code = $item['F'];
+            $short_name = '';
 
-            $plan_1 = $item['H'];
-            $fact_1 = $item['I'];
+            if($code == '00-000011') {
+                $short_name = 'НО № 10';
+            }
 
-            $plan_2 = $item['J'];
-            $fact_2 = $item['K'];
+            if($code == '00-000004') {
+                $short_name = 'НО № 4';
+            }
 
-            $plan_3 = $item['L'];
-            $fact_3 = $item['M'];
+            if($code == '00-000005') {
+                $short_name = 'НО № 5 - ИЦ';
+            }
 
-            $plan_4 = $item['N'];
-            $fact_4 = $item['O'];
+            if($code == '00-000007') {
+                $short_name = 'НО № 7';
+            }
 
-            $plan_5 = $item['P'];
-            $fact_5 = $item['Q'];
+            if($code == '00-000008') {
+                $short_name = 'НО № 8';
+            }
 
-            $plan_6 = $item['R'];
-            $fact_6 = $item['S'];
+            if($code == '00-000009') {
+                $short_name = 'НО № 9';
+            }
 
-            $plan_7 = $item['T'];
-            $fact_7 = $item['U'];
+            if($code == '00-000002') {
+                $short_name = 'Прочие'; //  Метрологический отдел
+            }
 
-            $plan_8 = $item['V'];
-            $fact_8 = $item['W'];
+            if($code == '00-000001') {
+                $short_name = 'Прочие'; // Научное отделение сопровождения НИОКР и информационных систем (НО СНИОКР и ИС)
+            }
 
-            $plan_9 = $item['X'];
-            $fact_9 = $item['Y'];
+            if($code == '00-000051') {
+                $short_name = 'Прочие'; // Отдел капитального строительства (ОКС)
+            }
 
-            $plan_10 = $item['Z'];
-            $fact_10 = $item['AA'];
+            if($code == '00-000000') {
+                $short_name = 'ГЗ Пульсар';
+            }
 
-            $plan_11 = $item['AB'];
-            $fact_11 = $item['AC'];
 
-            $plan_12 = $item['AD'];
-            $fact_12 = $item['AE'];
-            $ob = $item['AF'];
+            $plan_1 = $item['I'];
+            $fact_1 = $item['J'];
+
+            $plan_2 = $item['K'];
+            $fact_2 = $item['L'];
+
+            $plan_3 = $item['M'];
+            $fact_3 = $item['N'];
+
+            $plan_4 = $item['O'];
+            $fact_4 = $item['P'];
+
+            $plan_5 = $item['Q'];
+            $fact_5 = $item['R'];
+
+            $plan_6 = $item['S'];
+            $fact_6 = $item['T'];
+
+            $plan_7 = $item['U'];
+            $fact_7 = $item['V'];
+
+            $plan_8 = $item['W'];
+            $fact_8 = $item['X'];
+
+            $plan_9 = $item['Y'];
+            $fact_9 = $item['Z'];
+
+            $plan_10 = $item['AA'];
+            $fact_10 = $item['AB'];
+
+            $plan_11 = $item['AC'];
+            $fact_11 = $item['AD'];
+
+            $plan_12 = $item['AE'];
+            $fact_12 = $item['AF'];
+            $ob = $item['AG'];
 
 
 

@@ -45,13 +45,53 @@ class ExpectedRevenueSeeder extends Seeder
             $insertArray =[];
             $company_name = $item['B'];
             $short_name = $item['C'];
-            $kod = $item['D'];
+            $code = $item['D'];
 
-            if($kod == '00-000001' OR $kod == '00-000051' OR $kod == '00-000002') {
-                $short_name = 'Прочие';
-                $company_name = 'Прочие';
+            if($code == '') {
+                continue;
             }
 
+
+
+            if($code == '00-000011') {
+                $short_name = 'НО № 10';
+            }
+
+            if($code == '00-000004') {
+                $short_name = 'НО № 4';
+            }
+
+            if($code == '00-000005') {
+                $short_name = 'НО № 5 - ИЦ';
+            }
+
+            if($code == '00-000007') {
+                $short_name = 'НО № 7';
+            }
+
+            if($code == '00-000008') {
+                $short_name = 'НО № 8';
+            }
+
+            if($code == '00-000009') {
+                $short_name = 'НО № 9';
+            }
+
+            if($code == '00-000002') {
+                $short_name = 'Прочие'; //  Метрологический отдел
+            }
+
+            if($code == '00-000001') {
+                $short_name = 'Прочие'; // Научное отделение сопровождения НИОКР и информационных систем (НО СНИОКР и ИС)
+            }
+
+            if($code == '00-000051') {
+                $short_name = 'Прочие'; // Отдел капитального строительства (ОКС)
+            }
+
+            if($code == '00-000000') {
+                $short_name = 'ГЗ Пульсар';
+            }
 
 
             if($company_name == ''){
