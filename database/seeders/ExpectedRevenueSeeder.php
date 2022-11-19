@@ -50,6 +50,9 @@ class ExpectedRevenueSeeder extends Seeder
             if($code == '') {
                 continue;
             }
+            if($company_name == 'Подразделение') {
+                continue;
+            }
 
 
 
