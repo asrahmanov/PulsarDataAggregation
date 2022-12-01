@@ -99,6 +99,17 @@ reg_routes('data-aggregation-expected-revenue', \App\Http\Controllers\Api\Expect
     ]
 );
 
+reg_routes('data-aggregation-forecast', \App\Http\Controllers\Api\ExpectedRevenueController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
+        ['method' => 'get', 'uri' => 'get-by-name', 'pathParams'=>['company_name']],
+        ['method' => 'get', 'uri' => 'get-group'],
+    ]
+);
+
 
 function reg_routes($name, $controllerName, $router, $only = [], $except = [], $customUses = [])
 {
