@@ -163,7 +163,7 @@ class ForecastSeeder extends Seeder
 
 
 //        $filename_2021 = storage_path('app/forecast/36/2021/Форма по прогнозу.xlsx');
-        $filename_2022 = storage_path('app/forecast/36/2022/Форма по прогнозу.xlsx');
+        $filename_2022 = storage_path('app/forecast/36/2022/forecast.xlsx');
 //        $filename_2023 = storage_path('app/forecast/36/2023/Форма по прогнозу.xlsx');
 
 //        if (file_exists($filename_2021)) {
