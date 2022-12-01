@@ -138,39 +138,39 @@ class ForecastSeeder extends Seeder
 
 
 
-        $filename_2021 = storage_path('app/forecast/17/2021/Форма по прогнозу.xlsx');
-        $filename_2022 = storage_path('app/forecast/17/2022/Форма по прогнозу.xlsx');
-        $filename_2023 = storage_path('app/forecast/17/2023/Форма по прогнозу.xlsx');
+//        $filename_2021 = storage_path('app/forecast/17/2021/Форма по прогнозу.xlsx');
+//        $filename_2022 = storage_path('app/forecast/17/2022/Форма по прогнозу.xlsx');
+//        $filename_2023 = storage_path('app/forecast/17/2023/Форма по прогнозу.xlsx');
+//
+//        if (file_exists($filename_2021)) {
+//            $this->import($filename_2021, 2021, 17);
+//        } else {
+//            echo "Файл {$filename_2021} не найден " . PHP_EOL;
+//        }
+//
+//        if (file_exists($filename_2022)) {
+//            $this->import($filename_2022, 2022, 17);
+//        } else {
+//            echo "Файл {$filename_2022} не найден " . PHP_EOL;
+//        }
+//
+//        if (file_exists($filename_2023)) {
+//            $this->import($filename_2023, 2023, 17);
+//        } else {
+//            echo "Файл {$filename_2023} не найден " . PHP_EOL;
+//        }
 
-        if (file_exists($filename_2021)) {
-            $this->import($filename_2021, 2021, 17);
-        } else {
-            echo "Файл {$filename_2021} не найден " . PHP_EOL;
-        }
-
-        if (file_exists($filename_2022)) {
-            $this->import($filename_2022, 2022, 17);
-        } else {
-            echo "Файл {$filename_2022} не найден " . PHP_EOL;
-        }
-
-        if (file_exists($filename_2023)) {
-            $this->import($filename_2023, 2023, 17);
-        } else {
-            echo "Файл {$filename_2023} не найден " . PHP_EOL;
-        }
 
 
-
-        $filename_2021 = storage_path('app/forecast/36/2021/Форма по прогнозу.xlsx');
+//        $filename_2021 = storage_path('app/forecast/36/2021/Форма по прогнозу.xlsx');
         $filename_2022 = storage_path('app/forecast/36/2022/Форма по прогнозу.xlsx');
-        $filename_2023 = storage_path('app/forecast/36/2023/Форма по прогнозу.xlsx');
+//        $filename_2023 = storage_path('app/forecast/36/2023/Форма по прогнозу.xlsx');
 
-        if (file_exists($filename_2021)) {
-            $this->import($filename_2021, 2021, 36);
-        } else {
-            echo "Файл {$filename_2021} не найден " . PHP_EOL;
-        }
+//        if (file_exists($filename_2021)) {
+//            $this->import($filename_2021, 2021, 36);
+//        } else {
+//            echo "Файл {$filename_2021} не найден " . PHP_EOL;
+//        }
 
         if (file_exists($filename_2022)) {
             $this->import($filename_2022, 2022, 36);
@@ -178,11 +178,11 @@ class ForecastSeeder extends Seeder
             echo "Файл {$filename_2022} не найден " . PHP_EOL;
         }
 
-        if (file_exists($filename_2023)) {
-            $this->import($filename_2023, 2023, 36);
-        } else {
-            echo "Файл {$filename_2023} не найден " . PHP_EOL;
-        }
+//        if (file_exists($filename_2023)) {
+//            $this->import($filename_2023, 2023, 36);
+//        } else {
+//            echo "Файл {$filename_2023} не найден " . PHP_EOL;
+//        }
 
 
     }
