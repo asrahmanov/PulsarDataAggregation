@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\ExpectedRevenue;
+use App\Models\Forecast;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
@@ -21,7 +21,7 @@ class ForecastSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        ExpectedRevenue::where('year', $year)
+        Forecast::where('year', $year)
         ->where('company_id', $company_id)
             ->forceDelete();
 
