@@ -99,7 +99,7 @@ reg_routes('data-aggregation-expected-revenue', \App\Http\Controllers\Api\Expect
     ]
 );
 
-reg_routes('data-aggregation-forecast', \App\Http\Controllers\Api\ExpectedRevenueController::class,
+reg_routes('data-aggregation-forecast', \App\Http\Controllers\Api\ForecastController::class,
     $router,
     [],
     [],
