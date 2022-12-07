@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Kep;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
+use PhpOffice\PhpSpreadsheet\Shared\Date;
 
 class KepSeeder extends Seeder
 {
@@ -49,6 +50,13 @@ class KepSeeder extends Seeder
             $action = $item['D'];
             $date_action = $item['E'];
             $val = $item['F'];
+
+
+            if (is_numeric($date_action)){
+                $date_action = Date::excelToDateTimeObject($date_action)->format('Y-m-d');
+            }else{
+                $date_action = date('Y-m-d',strtotime($date_action));
+            }
 
 
 

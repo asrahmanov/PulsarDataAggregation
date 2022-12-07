@@ -21,10 +21,10 @@ class CreateKepTable extends Migration
             $table->string('action');
             $table->string('date_action');
             $table->integer('val');
-            $table->integer('year');
+            $table->date('year');
             $table->integer('company_id');
             $table->timestamps();
-            $table->softDeletes();;
+            $table->softDeletes();
         });
     }
 
