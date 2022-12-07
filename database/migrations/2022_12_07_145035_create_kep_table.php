@@ -19,7 +19,7 @@ class CreateKepTable extends Migration
             $table->string('pp');
             $table->string('nomenclature');
             $table->string('action');
-            $table->date('date_action');
+            $table->string('date_action');
             $table->integer('val');
             $table->integer('year');
             $table->integer('company_id');
