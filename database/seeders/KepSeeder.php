@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Forecast;
+use App\Models\Kep;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
@@ -21,7 +21,7 @@ class KepSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        Forecast::where('year', $year)
+        Kep::where('year', $year)
         ->where('company_id', $company_id)
             ->forceDelete();
 

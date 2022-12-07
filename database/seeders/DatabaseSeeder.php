@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
 //        BudgetSeeder::class,
 //        DefectSeeder::class,
 //          TestSeeder::class,
-//        ForecastSeeder::class,
+        ForecastSeeder::class,
             KepSeeder::class
         ]);
     }
