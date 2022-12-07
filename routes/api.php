@@ -111,6 +111,16 @@ reg_routes('data-aggregation-forecast', \App\Http\Controllers\Api\ForecastContro
 );
 
 
+reg_routes('data-aggregation-kep', \App\Http\Controllers\Api\KepController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
+    ]
+);
+
+
 function reg_routes($name, $controllerName, $router, $only = [], $except = [], $customUses = [])
 {
 
