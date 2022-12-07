@@ -108,7 +108,7 @@ class KepController extends Controller
      *          @OA\Property(property="nomenclature",description="Номенклатура;", type="text", example=""),
      *          @OA\Property(property="action",description="Action;", type="text", example=""),
      *          @OA\Property(property="date_action",description="0", type="text", example=""),
-     *          @OA\Property(property="date_action",description="0", type="text", example=""),
+     *          @OA\Property(property="val",description="1", type="number", example="0"),
      *          @OA\Property(property="year",description="2022", type="number", example="0"),
      *          @OA\Property(property="company_id",description="0", type="number", example="17"),
      *    )
@@ -124,7 +124,7 @@ class KepController extends Controller
      *          @OA\Property(property="nomenclature",description="Номенклатура;", type="text", example=""),
      *          @OA\Property(property="action",description="Action;", type="text", example=""),
      *          @OA\Property(property="date_action",description="0", type="text", example=""),
-     *          @OA\Property(property="date_action",description="0", type="text", example=""),
+     *          @OA\Property(property="val",description="1", type="number", example="0"),
      *          @OA\Property(property="year",description="2022", type="number", example="0"),
      *          @OA\Property(property="company_id",description="0", type="number", example="17"),
      *         )
@@ -215,7 +215,7 @@ class KepController extends Controller
      *          @OA\Property(property="nomenclature",description="Номенклатура;", type="text", example=""),
      *          @OA\Property(property="action",description="Action;", type="text", example=""),
      *          @OA\Property(property="date_action",description="0", type="text", example=""),
-     *          @OA\Property(property="date_action",description="0", type="text", example=""),
+     *          @OA\Property(property="val",description="0", type="number", example=""),
      *          @OA\Property(property="year",description="2022", type="number", example="0"),
      *          @OA\Property(property="company_id",description="0", type="number", example="17"),
      *    )
@@ -231,7 +231,7 @@ class KepController extends Controller
      *          @OA\Property(property="nomenclature",description="Номенклатура;", type="text", example=""),
      *          @OA\Property(property="action",description="Action;", type="text", example=""),
      *          @OA\Property(property="date_action",description="0", type="text", example=""),
-     *          @OA\Property(property="date_action",description="0", type="text", example=""),
+     *          @OA\Property(property="val",description="1", type="number", example="0"),
      *          @OA\Property(property="year",description="2022", type="number", example="0"),
      *          @OA\Property(property="company_id",description="0", type="number", example="17"),
      *
