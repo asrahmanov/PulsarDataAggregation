@@ -45,6 +45,7 @@ class KepPlanSeeder extends Seeder
 
             $insertArray =[];
             $mount = $item['A'];
+            $mount = preg_replace("/[0-9]{1}/", "", $mount);
             $nomenclature = $item['B'];
             $val = $item['C'];
 
