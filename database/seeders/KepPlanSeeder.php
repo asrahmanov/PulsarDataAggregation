@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Kep;
+use App\Models\KepPlan;
 use Illuminate\Database\Seeder;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
-class KepSeeder extends Seeder
+class KepPlanSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,7 +22,7 @@ class KepSeeder extends Seeder
         $reader = IOFactory::createReader('Xlsx');
         $reader->setReadDataOnly(TRUE);
 
-        Kep::where('year', $year)
+        KepPlan::where('year', $year)
         ->where('company_id', $company_id)
             ->forceDelete();
 
@@ -44,28 +44,16 @@ class KepSeeder extends Seeder
         foreach ($dataArray as $key => $item){
 
             $insertArray =[];
-            $source_name = 'Ноябрь';
-            $pp = $item['A'];
+            $mount = $item['A'];
             $nomenclature = $item['B'];
-            $action = $item['C'];
-            $date_action = $item['D'];
-            $val = $item['E'];
+            $val = $item['C'];
 
-
-            if (is_numeric($date_action)){
-                $date_action = Date::excelToDateTimeObject($date_action)->format('Y-m-d');
-            }else{
-                $date_action = date('Y-m-d',strtotime($date_action));
-            }
 
 
 
             $insertArray[] = [
-                "source_name"=> $source_name,
-                "pp"=> $pp,
+                "mount"=> $mount,
                 "nomenclature"=> $nomenclature,
-                "action"=> $action,
-                "date_action"=> $date_action,
                 "val"=> $val,
                 "year"=> $year,
                 "company_id"=> $company_id
@@ -76,7 +64,7 @@ class KepSeeder extends Seeder
 
 
 
-            $result = \DB::table('kep')->insert($insertArray);
+            $result = \DB::table('kep_plan')->insert($insertArray);
 
         }
 
@@ -91,7 +79,7 @@ class KepSeeder extends Seeder
 
 
 
-        $filename_2022 = storage_path('app/kep/36/2022/kep.xlsx');
+        $filename_2022 = storage_path('app/kep/36/2022/plan.xlsx');
 
 
 

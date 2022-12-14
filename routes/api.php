@@ -121,6 +121,16 @@ reg_routes('data-aggregation-kep', \App\Http\Controllers\Api\KepController::clas
 );
 
 
+reg_routes('data-aggregation-kep-plan', \App\Http\Controllers\Api\KepPlanController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-id', 'pathParams'=>['id']],
+    ]
+);
+
+
 function reg_routes($name, $controllerName, $router, $only = [], $except = [], $customUses = [])
 {
 
