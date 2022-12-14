@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 //          TestSeeder::class,
 //        ForecastSeeder::class,
             KepSeeder::class,
-            KepSeeder::class,
+            KepPlanSeeder::class,
 
         ]);
     }
