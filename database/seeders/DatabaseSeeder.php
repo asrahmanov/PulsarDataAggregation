@@ -17,16 +17,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-//        ContractAndFactSeeder::class,
+        ContractAndFactSeeder::class,
 //        PlanContractSeeder::class,
-//        ExpectedRevenueSeeder::class,
+        ExpectedRevenueSeeder::class,
 //        OperationalPlanSeeder::class,
 //        BudgetSeeder::class,
-//        DefectSeeder::class,
+        DefectSeeder::class,
 //          TestSeeder::class,
 //        ForecastSeeder::class,
-            KepSeeder::class,
-            KepPlanSeeder::class,
+//            KepSeeder::class,
+//            KepPlanSeeder::class,
 
         ]);
     }
