@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-//        ContractAndFactSeeder::class,
-        PlanContractSeeder::class,
-//        ExpectedRevenueSeeder::class,
+        ContractAndFactSeeder::class,
+//        PlanContractSeeder::class,
+        ExpectedRevenueSeeder::class,
 //        OperationalPlanSeeder::class,
 //        BudgetSeeder::class,
 //        DefectSeeder::class,
