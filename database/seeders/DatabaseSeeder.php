@@ -18,15 +18,15 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
         ContractAndFactSeeder::class,
-//        PlanContractSeeder::class,
+        PlanContractSeeder::class,
         ExpectedRevenueSeeder::class,
         OperationalPlanSeeder::class,
-//        BudgetSeeder::class,
+        BudgetSeeder::class,
 //        DefectSeeder::class,
 //          TestSeeder::class,
         ForecastSeeder::class,
-//            KepSeeder::class,
-//            KepPlanSeeder::class,
+            KepSeeder::class,
+            KepPlanSeeder::class,
 
         ]);
     }
