@@ -24,6 +24,7 @@ class CreateTableFinancialIndicators extends Migration
             $table->DOUBLE('last_year');
             $table->enum('type',['ebida','profit','net profit','revenue']);
             $table->timestamps();
+            $table->softDeletes();;
         });
     }
 
