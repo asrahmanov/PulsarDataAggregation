@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
 //        ForecastSeeder::class,
 //            KepSeeder::class,
 //            KepPlanSeeder::class,
+        FinancialIndicatorsSeeder::class
 
         ]);
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableFinancialIndicatorsProfit extends Migration
+class CreateTableFinancialIndicatorsEbida extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CreateTableFinancialIndicatorsProfit extends Migration
      */
     public function up()
     {
-        Schema::create('table_financial_indicators_profit', function (Blueprint $table) {
+        Schema::create('financial_indicators', function (Blueprint $table) {
             $table->id();
+            $table->integer('company_id');
             $table->string('mount');
             $table->string('year');
             $table->DOUBLE('budget');
             $table->DOUBLE('fact');
             $table->DOUBLE('forecast');
             $table->DOUBLE('last_year');
+            $table->enum('type',['ebida','profit','net profit','revenue']);
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ class CreateTableFinancialIndicatorsProfit extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_financial_indicators_profit');
+        Schema::dropIfExists('financial_indicators');
     }
 }
